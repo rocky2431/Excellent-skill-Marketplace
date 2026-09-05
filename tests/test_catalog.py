@@ -41,6 +41,11 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(all(p["tier"] in {"official", "curated"} for p in kimi))
         for host, variable in [("claude", "CLAUDE_PLUGIN_ROOT"), ("zcode", "ZCODE_PLUGIN_ROOT")]:
             entries = rendered[catalog.ROOT / f".{host}-plugin/marketplace.json"]["plugins"]
+            self.assertEqual(
+                {p["name"]: p["version"] for p in source["plugins"]},
+                {p["name"]: p.get("version") for p in entries},
+                host,
+            )
             task = next(p for p in entries if p["name"] == "task-state-with-files")
             self.assertFalse(task["strict"])
             command = task["hooks"]["SessionStart"][0]["hooks"][0]["command"]

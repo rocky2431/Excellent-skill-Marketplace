@@ -7,6 +7,7 @@
     {
       "name": "ultra-goal",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
+      "version": "2.15.3",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
@@ -18,6 +19,7 @@
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
+      "version": "0.2.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
@@ -25,7 +27,6 @@
         "sha": "f9dc8b50fb24a1d83e7ad77dedaeda4bdc5c5166"
       },
       "strict": false,
-      "version": "0.2.1",
       "skills": [
         "./plugins/agent-delegation/skills"
       ]
@@ -33,6 +34,7 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
+      "version": "0.2.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
@@ -40,7 +42,6 @@
         "sha": "99709a5a5e9ebaad5985817295dfbbf6fbb3225f"
       },
       "strict": false,
-      "version": "0.2.1",
       "skills": [
         "./plugins/task-state-with-files/skills"
       ],
@@ -62,6 +63,7 @@
     {
       "name": "agent-harness-design",
       "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
+      "version": "0.4.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
@@ -69,7 +71,6 @@
         "sha": "c3e542fd90db07ccda285c6d486506e6dee4d7ea"
       },
       "strict": false,
-      "version": "0.4.0",
       "skills": [
         "./plugins/agent-harness-design/skills"
       ]

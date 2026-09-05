@@ -116,14 +116,15 @@ def git_source(plugin: dict, *, subtree: bool = True) -> dict:
 
 
 def claude_entry(plugin: dict, host: str) -> dict:
-    entry = {"name": plugin["name"], "description": plugin["description"]}
+    entry = {"name": plugin["name"], "description": plugin["description"],
+             "version": plugin["version"]}
     if plugin["name"] == "ultra-goal":
         entry["source"] = git_source(plugin)
         return entry
     # These upstream projects ship Codex manifests. The marketplace supplies the
     # other host's component definition without editing those source repositories.
     entry.update(source=git_source(plugin, subtree=False), strict=False,
-                 version=plugin["version"], skills=[f"./{plugin['path']}/skills"])
+                 skills=[f"./{plugin['path']}/skills"])
     if plugin["name"] == "task-state-with-files":
         variable = "CLAUDE_PLUGIN_ROOT" if host == "claude" else "ZCODE_PLUGIN_ROOT"
         script = f"${{{variable}}}/{plugin['path']}/skills/task-state-with-files/scripts/lifecycle_hook.py"
