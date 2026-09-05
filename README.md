@@ -69,7 +69,9 @@ UltraGoal and Task State use Python scripts. Make `python3` available to the hos
 
 Agent Delegation also needs the `agent-delegate` CLI, its ACP dependencies, and the agents you want to use. Installing its marketplace plugin loads the Skill; it does not configure those runtimes. Follow the [upstream runtime installation instructions](https://github.com/rocky2431/agent-delegate-skill#安装模型).
 
-Task State includes a `SessionStart` recovery hook on Codex, Claude Code, and zCode. Its Kimi package currently provides the Skill and scripts without an automatic recovery hook. Ask Kimi to recover from the task-state file when resuming work. UltraGoal includes its own Kimi hooks, whose continuation limits are described in its README.
+Task State includes a `SessionStart` recovery hook on Codex, Claude Code, and zCode. Its Kimi package restores a bounded state excerpt through `UserPromptSubmit` whenever you send a message, including after resuming a session. Kimi 0.41.0 does not inject returned text from `SessionStart` or `PostCompact`, so this does not guarantee immediate recovery during autonomous compaction. UltraGoal includes its own Kimi hooks, whose continuation limits are described in its README.
+
+See the [2026-09-06 host compatibility review](docs/host-compatibility-2026-09-06.md) (Chinese) for the tested paths and their limits.
 
 If you already installed a plugin from its individual marketplace, disable or uninstall that copy before enabling the same plugin here. Two enabled copies can load duplicate Skills or run the same hooks twice. Check your host's installed-plugin list before changing anything.
 

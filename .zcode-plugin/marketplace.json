@@ -11,7 +11,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "21495b62a0fc81ac5c5bf7f71dea53ab5b4a57d3",
+        "sha": "ce41e775a83cfe2d8adad53d4eaa62dce80472c9",
         "path": "plugins/ultra-goal"
       }
     },
@@ -22,10 +22,10 @@
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "49309b202907f97f29f121f894d8b031a73bb7bd"
+        "sha": "f9dc8b50fb24a1d83e7ad77dedaeda4bdc5c5166"
       },
       "strict": false,
-      "version": "0.2.0",
+      "version": "0.2.1",
       "skills": [
         "./plugins/agent-delegation/skills"
       ]
@@ -37,10 +37,10 @@
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "921ec6a98c75bec5baeabd674a00b137069a8862"
+        "sha": "99709a5a5e9ebaad5985817295dfbbf6fbb3225f"
       },
       "strict": false,
-      "version": "0.2.0",
+      "version": "0.2.1",
       "skills": [
         "./plugins/task-state-with-files/skills"
       ],
@@ -66,8 +66,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-331ba0644ec1.zip",
-        "sha256": "375cd5bef7899678d03dead9864ff41a286c290c04f35f165e94069435df0615"
+        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-c3e542fd90db.zip",
+        "sha256": "ccb1cd01993cdc90f64a3a84183a0c41b199c2cb19b651c72fe76516e8e76ae3"
       }
     }
   ]

@@ -69,7 +69,9 @@ UltraGoal 和 Task State 使用 Python 脚本，请让宿主能够执行 `python
 
 Agent Delegation 还需要 `agent-delegate` 命令、ACP 依赖，以及你打算调用的 Agent。安装市场插件只会加载 Skill，不会替你配置这些运行环境。请按[原仓库的运行环境安装说明](https://github.com/rocky2431/agent-delegate-skill#安装模型)完成配置。
 
-Task State 在 Codex、CC 和 zCode 上包含 `SessionStart` 恢复 Hook。Kimi 安装包目前提供 Skill 和脚本，不含自动恢复 Hook；继续任务时，请让 Kimi 从任务状态文件恢复。UltraGoal 自带 Kimi Hook，其续跑限制见 UltraGoal 的 README。
+Task State 在 Codex、CC 和 zCode 上包含 `SessionStart` 恢复 Hook。Kimi 安装包通过 `UserPromptSubmit` 在每次用户发消息时补回有长度上限的任务状态，包括恢复会话后的消息。Kimi 0.41.0 不会把 `SessionStart` 或 `PostCompact` 的输出注入模型，因此这不保证自主压缩后立即恢复。UltraGoal 自带 Kimi Hook，其续跑限制见 UltraGoal 的 README。
+
+当前适配及实测范围见 [2026-09-06 四宿主核查记录](docs/host-compatibility-2026-09-06.md)。
 
 如果已经从某个插件的独立市场安装过它，在这里启用同一个插件前，请先停用或卸载原来的副本。两个副本同时启用，可能重复加载 Skill 或执行 Hook。操作前先检查宿主的已安装插件列表。
 

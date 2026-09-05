@@ -5,30 +5,30 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.15.1",
+      "version": "2.15.3",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.15.1-21495b62a0fc.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.15.3-ce41e775a83c.zip"
     },
     {
       "id": "agent-delegation",
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.2.0-49309b202907.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.2.1-f9dc8b50fb24.zip"
     },
     {
       "id": "task-state-with-files",
       "displayName": "task-state-with-files",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "homepage": "https://github.com/rocky2431/plan-with-flie-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.2.0-921ec6a98c75.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.2.1-99709a5a5e9e.zip"
     },
     {
       "id": "agent-harness-design",
@@ -38,7 +38,7 @@
       "version": "0.4.0",
       "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
       "homepage": "https://github.com/rocky2431/agent-harness-design-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-331ba0644ec1.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-c3e542fd90db.zip"
     }
   ]
 }

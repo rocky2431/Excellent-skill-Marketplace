@@ -185,6 +185,10 @@ def check(source: dict) -> None:
             manifest = json.loads(archive.read("kimi.plugin.json"))
             if (manifest["name"], manifest["version"]) != (plugin["name"], plugin["version"]):
                 raise ValueError(f"Incorrect Kimi manifest: {plugin['name']}")
+            if plugin["name"] == "task-state-with-files":
+                events = [hook.get("event") for hook in manifest.get("hooks", [])]
+                if "UserPromptSubmit" not in events:
+                    raise ValueError("Task State must ship its native Kimi UserPromptSubmit recovery hook")
             for skill_root in manifest["skills"]:
                 prefix = skill_root.removeprefix("./").rstrip("/") + "/"
                 if not any(n.startswith(prefix) and n.endswith("/SKILL.md") for n in archive.namelist()):

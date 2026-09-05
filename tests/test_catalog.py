@@ -3,7 +3,9 @@
 import io
 import json
 from pathlib import Path
+import subprocess
 import sys
+import tempfile
 import unittest
 import zipfile
 
@@ -12,6 +14,25 @@ import catalog
 
 
 class CatalogTests(unittest.TestCase):
+    def test_published_task_state_package_executes_its_kimi_recovery_hook(self):
+        plugin = next(p for p in catalog.load_sources()["plugins"] if p["name"] == "task-state-with-files")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package = root / "plugin"
+            with zipfile.ZipFile(catalog.ROOT / catalog.package_path(plugin)) as archive:
+                manifest = json.loads(archive.read("kimi.plugin.json"))
+                self.assertIn("UserPromptSubmit", [h["event"] for h in manifest.get("hooks", [])])
+                archive.extractall(package)
+            workspace = root / "project"
+            (workspace / "work").mkdir(parents=True)
+            (workspace / "work/task-state.md").write_text("## Next action\nPACKAGED-RECOVERY-MARKER\n")
+            hook = next(h for h in manifest["hooks"] if h["event"] == "UserPromptSubmit")
+            result = subprocess.run(hook["command"], shell=True, cwd=package,
+                                    input=json.dumps({"hook_event_name": "UserPromptSubmit", "cwd": str(workspace)}),
+                                    capture_output=True, text=True, timeout=10)
+            self.assertEqual(0, result.returncode, result.stderr)
+            self.assertIn("PACKAGED-RECOVERY-MARKER", result.stdout)
+
     def test_native_catalog_and_package_contracts(self):
         source = catalog.load_sources()
         rendered = catalog.catalogs(source)
