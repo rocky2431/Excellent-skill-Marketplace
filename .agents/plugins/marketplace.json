@@ -1,0 +1,68 @@
+{
+  "name": "excellent-skill-marketplace",
+  "interface": {
+    "displayName": "Excellent Skill Marketplace"
+  },
+  "plugins": [
+    {
+      "name": "ultra-goal",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/ultra-goal-skill.git",
+        "ref": "main",
+        "sha": "21495b62a0fc81ac5c5bf7f71dea53ab5b4a57d3",
+        "path": "plugins/ultra-goal"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "agent-delegation",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/agent-delegate-skill.git",
+        "ref": "main",
+        "sha": "49309b202907f97f29f121f894d8b031a73bb7bd",
+        "path": "plugins/agent-delegation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "task-state-with-files",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
+        "ref": "main",
+        "sha": "921ec6a98c75bec5baeabd674a00b137069a8862",
+        "path": "plugins/task-state-with-files"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "agent-harness-design",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
+        "ref": "main",
+        "sha": "331ba0644ec18efc6de5fb4c20c02d19f7c11d57",
+        "path": "plugins/agent-harness-design"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

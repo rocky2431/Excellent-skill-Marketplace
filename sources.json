@@ -1,0 +1,46 @@
+{
+  "name": "excellent-skill-marketplace",
+  "repository": "rocky2431/Excellent-skill-Marketplace",
+  "plugins": [
+    {
+      "name": "ultra-goal",
+      "repository": "rocky2431/ultra-goal-skill",
+      "path": "plugins/ultra-goal",
+      "ref": "main",
+      "sha": "21495b62a0fc81ac5c5bf7f71dea53ab5b4a57d3",
+      "version": "2.15.1",
+      "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
+      "category": "Developer Tools"
+    },
+    {
+      "name": "agent-delegation",
+      "repository": "rocky2431/agent-delegate-skill",
+      "path": "plugins/agent-delegation",
+      "ref": "main",
+      "sha": "49309b202907f97f29f121f894d8b031a73bb7bd",
+      "version": "0.2.0",
+      "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
+      "category": "Productivity"
+    },
+    {
+      "name": "task-state-with-files",
+      "repository": "rocky2431/plan-with-flie-skill",
+      "path": "plugins/task-state-with-files",
+      "ref": "main",
+      "sha": "921ec6a98c75bec5baeabd674a00b137069a8862",
+      "version": "0.2.0",
+      "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
+      "category": "Developer Tools"
+    },
+    {
+      "name": "agent-harness-design",
+      "repository": "rocky2431/agent-harness-design-skill",
+      "path": "plugins/agent-harness-design",
+      "ref": "main",
+      "sha": "331ba0644ec18efc6de5fb4c20c02d19f7c11d57",
+      "version": "0.4.0",
+      "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
+      "category": "Developer Tools"
+    }
+  ]
+}

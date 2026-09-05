@@ -1,0 +1,78 @@
+{
+  "name": "excellent-skill-marketplace",
+  "owner": {
+    "name": "rocky2431"
+  },
+  "plugins": [
+    {
+      "name": "ultra-goal",
+      "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/ultra-goal-skill.git",
+        "ref": "main",
+        "sha": "21495b62a0fc81ac5c5bf7f71dea53ab5b4a57d3",
+        "path": "plugins/ultra-goal"
+      }
+    },
+    {
+      "name": "agent-delegation",
+      "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rocky2431/agent-delegate-skill.git",
+        "ref": "main",
+        "sha": "49309b202907f97f29f121f894d8b031a73bb7bd"
+      },
+      "strict": false,
+      "version": "0.2.0",
+      "skills": [
+        "./plugins/agent-delegation/skills"
+      ]
+    },
+    {
+      "name": "task-state-with-files",
+      "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
+        "ref": "main",
+        "sha": "921ec6a98c75bec5baeabd674a00b137069a8862"
+      },
+      "strict": false,
+      "version": "0.2.0",
+      "skills": [
+        "./plugins/task-state-with-files/skills"
+      ],
+      "hooks": {
+        "SessionStart": [
+          {
+            "matcher": "^(startup|resume|clear|compact)$",
+            "hooks": [
+              {
+                "type": "command",
+                "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/plugins/task-state-with-files/skills/task-state-with-files/scripts/lifecycle_hook.py\" --host claude",
+                "timeout": 10
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "agent-harness-design",
+      "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
+        "ref": "main",
+        "sha": "331ba0644ec18efc6de5fb4c20c02d19f7c11d57"
+      },
+      "strict": false,
+      "version": "0.4.0",
+      "skills": [
+        "./plugins/agent-harness-design/skills"
+      ]
+    }
+  ]
+}
