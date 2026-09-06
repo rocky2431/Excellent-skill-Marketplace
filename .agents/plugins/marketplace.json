@@ -70,7 +70,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "57bd50e1e188fea61365cee2ce8d75b266e140e8",
+        "sha": "3610b1fd49150d9cbc9dc6985b1b419fd40bb063",
         "path": "plugins/deep-thinking"
       },
       "policy": {
