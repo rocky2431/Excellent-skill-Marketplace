@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "ce41e775a83cfe2d8adad53d4eaa62dce80472c9",
-      "version": "2.15.3",
+      "sha": "a5f6f17543edd4dea5d5cbe4ec1b3fcb7197ed0f",
+      "version": "2.15.6",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "category": "Developer Tools"
     },

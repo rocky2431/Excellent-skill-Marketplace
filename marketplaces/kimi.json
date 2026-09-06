@@ -5,10 +5,10 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.15.3",
+      "version": "2.15.6",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.15.3-ce41e775a83c.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.15.6-a5f6f17543ed.zip"
     },
     {
       "id": "agent-delegation",
