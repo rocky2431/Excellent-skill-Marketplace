@@ -39,6 +39,16 @@
       "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
       "homepage": "https://github.com/rocky2431/agent-harness-design-skill",
       "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-c3e542fd90db.zip"
+    },
+    {
+      "id": "deep-thinking",
+      "displayName": "deep-thinking",
+      "type": "plugin",
+      "tier": "curated",
+      "version": "0.1.0+codex.20260906011727",
+      "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
+      "homepage": "https://github.com/rocky2431/deepthink-skill",
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.1.0+codex.20260906011727-57bd50e1e188.zip"
     }
   ]
 }

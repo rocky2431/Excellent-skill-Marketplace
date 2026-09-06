@@ -14,6 +14,15 @@ import catalog
 
 
 class CatalogTests(unittest.TestCase):
+    def test_build_metadata_versions(self):
+        plugin = catalog.load_sources()["plugins"][0]
+        for version in ("0.1.0+codex.20260906011727", "0.1.0-rc.1+build.2"):
+            with self.subTest(version=version):
+                catalog.validate_sources({"plugins": [{**plugin, "version": version}]})
+        for version in ("0.1.0+", "0.1.0+build..1", "0.1.0+build/1"):
+            with self.subTest(version=version), self.assertRaises(ValueError):
+                catalog.validate_sources({"plugins": [{**plugin, "version": version}]})
+
     def test_published_task_state_package_executes_its_kimi_recovery_hook(self):
         plugin = next(p for p in catalog.load_sources()["plugins"] if p["name"] == "task-state-with-files")
         with tempfile.TemporaryDirectory() as temporary:
@@ -46,6 +55,11 @@ class CatalogTests(unittest.TestCase):
                 {p["name"]: p.get("version") for p in entries},
                 host,
             )
+            thinking = next(p for p in entries if p["name"] == "deep-thinking")
+            self.assertEqual("git-subdir", thinking["source"]["source"])
+            self.assertEqual("plugins/deep-thinking", thinking["source"]["path"])
+            self.assertNotIn("strict", thinking)
+            self.assertNotIn("skills", thinking)
             task = next(p for p in entries if p["name"] == "task-state-with-files")
             self.assertFalse(task["strict"])
             command = task["hooks"]["SessionStart"][0]["hooks"][0]["command"]

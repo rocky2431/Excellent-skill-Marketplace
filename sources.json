@@ -41,6 +41,16 @@
       "version": "0.4.0",
       "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
       "category": "Developer Tools"
+    },
+    {
+      "name": "deep-thinking",
+      "repository": "rocky2431/deepthink-skill",
+      "path": "plugins/deep-thinking",
+      "ref": "main",
+      "sha": "57bd50e1e188fea61365cee2ce8d75b266e140e8",
+      "version": "0.1.0+codex.20260906011727",
+      "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
+      "category": "Productivity"
     }
   ]
 }

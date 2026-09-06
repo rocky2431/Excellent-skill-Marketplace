@@ -70,6 +70,18 @@
         "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-c3e542fd90db.zip",
         "sha256": "ccb1cd01993cdc90f64a3a84183a0c41b199c2cb19b651c72fe76516e8e76ae3"
       }
+    },
+    {
+      "name": "deep-thinking",
+      "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
+      "version": "0.1.0+codex.20260906011727",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/deepthink-skill.git",
+        "ref": "main",
+        "sha": "57bd50e1e188fea61365cee2ce8d75b266e140e8",
+        "path": "plugins/deep-thinking"
+      }
     }
   ]
 }

@@ -37,7 +37,8 @@ def validate_sources(source: dict) -> None:
             raise ValueError(f"Invalid GitHub repository: {name}")
         if not re.fullmatch(r"[0-9a-f]{40}", plugin["sha"]):
             raise ValueError(f"A full commit SHA is required: {name}")
-        if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?", plugin["version"]):
+        if not re.fullmatch(r"\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?"
+                            r"(?:\+[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*)?", plugin["version"]):
             raise ValueError(f"Invalid version: {name}")
         path = PurePosixPath(plugin["path"])
         if path.is_absolute() or ".." in path.parts or "\\" in plugin["path"] or str(path) in ("", "."):
@@ -118,7 +119,7 @@ def git_source(plugin: dict, *, subtree: bool = True) -> dict:
 def claude_entry(plugin: dict, host: str) -> dict:
     entry = {"name": plugin["name"], "description": plugin["description"],
              "version": plugin["version"]}
-    if plugin["name"] == "ultra-goal":
+    if plugin["name"] in {"ultra-goal", "deep-thinking"}:
         entry["source"] = git_source(plugin)
         return entry
     # These upstream projects ship Codex manifests. The marketplace supplies the

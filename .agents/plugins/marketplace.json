@@ -63,6 +63,21 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Developer Tools"
+    },
+    {
+      "name": "deep-thinking",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/deepthink-skill.git",
+        "ref": "main",
+        "sha": "57bd50e1e188fea61365cee2ce8d75b266e140e8",
+        "path": "plugins/deep-thinking"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-A shared catalog of four plugins for Codex, Claude Code, zCode, and Kimi Code. Add the marketplace in your agent, then install the plugins you want.
+A shared catalog of five plugins for Codex, Claude Code, zCode, and Kimi Code. Add the marketplace in your agent, then install the plugins you want.
 
 Each plugin keeps its own source repository, version, and release schedule. This repository records the selected commits and provides the catalog format each host reads. Kimi packages are generated from those commits.
 
@@ -14,6 +14,7 @@ Each plugin keeps its own source repository, version, and release schedule. This
 | `agent-delegation` | Delegate work between local agents and inspect their results. | [Agent Delegation](https://github.com/rocky2431/agent-delegate-skill) |
 | `task-state-with-files` | Keep task progress in files so an agent can recover after a new session or compaction. | [Task State with Files](https://github.com/rocky2431/plan-with-flie-skill) |
 | `agent-harness-design` | Design and review an agent's tools, authority, context recovery, and verification. | [Agent Harness Design](https://github.com/rocky2431/agent-harness-design-skill) |
+| `deep-thinking` | Clarify ideas, research evidence, examine competing views, and form a defensible conclusion. | [Deep Thinking](https://github.com/rocky2431/deepthink-skill) |
 
 You can install any combination. Installing one plugin does not install the others.
 
@@ -98,7 +99,7 @@ With Python 3.10+ and Git installed:
 # Select the latest published main commit of one plugin.
 python3 scripts/catalog.py refresh --plugin agent-harness-design
 
-# Or refresh all four source references.
+# Or refresh all source references.
 python3 scripts/catalog.py refresh
 
 # Validate the generated files without network access.
