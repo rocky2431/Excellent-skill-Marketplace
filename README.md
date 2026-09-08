@@ -6,6 +6,8 @@ A shared catalog of five plugins for Codex, Claude Code, zCode, and Kimi Code. A
 
 Each plugin keeps its own source repository, version, and release schedule. This repository records the selected commits and provides the catalog format each host reads. Kimi packages are generated from those commits.
 
+The four workflow Skills can be used independently or composed through existing artifacts. See [independent skills and optional handoffs](docs/skill-composition.md), including the explicit recovery selection required by Task State 0.4.0.
+
 ## Available plugins
 
 | Plugin ID | Use it for | Source and full instructions |

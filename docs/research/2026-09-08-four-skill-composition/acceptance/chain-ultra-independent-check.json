@@ -1,0 +1,15 @@
+{
+  "result": "PASS: draft handoff only",
+  "acceptance_text_verbatim": true,
+  "acceptance_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "protected_sources_unchanged": 7,
+  "validation_exit": 1,
+  "validation_output": ".goals/invoice-summary-cli.decisions.md: OWNER_CONFIRMATION_MISSING: missing the explicit owner `Confirm package checkpoint` row. Read back the current package and record it only after an explicit reply; the row is auditable provenance, not authentication",
+  "armed": false,
+  "implemented": false
+}

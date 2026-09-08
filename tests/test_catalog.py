@@ -2,6 +2,7 @@
 
 import io
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -38,9 +39,47 @@ class CatalogTests(unittest.TestCase):
             hook = next(h for h in manifest["hooks"] if h["event"] == "UserPromptSubmit")
             result = subprocess.run(hook["command"], shell=True, cwd=package,
                                     input=json.dumps({"hook_event_name": "UserPromptSubmit", "cwd": str(workspace)}),
+                                    env={**{k: v for k, v in os.environ.items() if not k.startswith("TASK_STATE_")},
+                                         "TASK_STATE_FILE": "work/task-state.md"},
                                     capture_output=True, text=True, timeout=10)
             self.assertEqual(0, result.returncode, result.stderr)
             self.assertIn("PACKAGED-RECOVERY-MARKER", result.stdout)
+
+    def test_shipped_task_selection_is_scoped_and_hooks_are_read_only(self):
+        plugin = next(p for p in catalog.load_sources()["plugins"] if p["name"] == "task-state-with-files")
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            package = root / "plugin"
+            with zipfile.ZipFile(catalog.ROOT / catalog.package_path(plugin)) as archive:
+                archive.extractall(package)
+            scripts = package / "skills/task-state-with-files/scripts"
+            workspace = root / "project"
+            (workspace / ".tasks").mkdir(parents=True)
+            (workspace / ".tasks/selected.md").write_text("Keep refund signs. Next: verify the output.\n")
+            env = {k: v for k, v in os.environ.items() if not k.startswith("TASK_STATE_")}
+            env["PLUGIN_ROOT"] = str(package)
+
+            def hook(host, session):
+                command = ([str(package / "hooks/session_start.py")] if host == "codex" else
+                           [str(scripts / "lifecycle_hook.py"), "--host", host])
+                event = {"cwd": str(workspace), "session_id": session, "source": "resume",
+                         "hook_event_name": "UserPromptSubmit" if host == "kimi" else "SessionStart"}
+                result = subprocess.run([sys.executable, *command], input=json.dumps(event),
+                                        env=env, text=True, capture_output=True, timeout=10)
+                self.assertEqual((0, ""), (result.returncode, result.stderr))
+                return result.stdout
+
+            for host in ("codex", "claude", "zcode", "kimi"):
+                self.assertEqual("", hook(host, "owner"), host)
+            selected = subprocess.run([sys.executable, str(scripts / "task_state.py"),
+                                       "activate", "--task", "selected", "--session", "owner",
+                                       "--root", str(workspace)], env=env, text=True, capture_output=True)
+            self.assertEqual(0, selected.returncode, selected.stderr)
+            before = {str(p): p.read_bytes() for p in workspace.rglob("*") if p.is_file()}
+            for host in ("codex", "claude", "zcode", "kimi"):
+                self.assertIn("Keep refund signs", hook(host, "owner"), host)
+                self.assertEqual("", hook(host, "unrelated"), host)
+            self.assertEqual(before, {str(p): p.read_bytes() for p in workspace.rglob("*") if p.is_file()})
 
     def test_native_catalog_and_package_contracts(self):
         source = catalog.load_sources()

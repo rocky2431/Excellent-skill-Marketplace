@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "files": {
+    "packages/kimi/task-state-with-files-0.4.0-73d28bc7f700.zip": "0956a34cebb3f8bcdd41c6499bdbb9c078e4505028bea94d167042361c771a95",
+    "packages/kimi/agent-delegation-0.2.0-49309b202907.zip": "65005ab8bff77c11664d6d0cffb5af0917c539750504133fe8d108587b8ba882",
+    "packages/kimi/ultra-goal-2.15.3-ce41e775a83c.zip": "251b6a1411d5e18845b5b3dcb99781106bdbfd7d2fdc12fa8280aa6a5802c5cb",
+    "packages/kimi/agent-harness-design-0.4.0-c3e542fd90db.zip": "ccb1cd01993cdc90f64a3a84183a0c41b199c2cb19b651c72fe76516e8e76ae3",
+    "packages/kimi/task-state-with-files-0.2.0-921ec6a98c75.zip": "099b5dd8edc9b155f9b3e5825501acab6827fce53db4264c14d2abb221d49930",
+    "packages/kimi/deep-thinking-0.1.0+codex.20260906011727-57bd50e1e188.zip": "5e2d0a45dbcb1d977f4d2a2aa6d40d94533ec2c847137313126cbc552756fbfd",
+    "packages/kimi/ultra-goal-2.15.6-a5f6f17543ed.zip": "bf93280d1fc1f49c00a256ef26d5ae149cac85cddec3ed6d9748925b38851194",
+    "packages/kimi/agent-delegation-0.2.1-f9dc8b50fb24.zip": "3e2f2d2993a2c212d6a586926101d6079fbfa17274346c7a5337500adbb3e1d2",
+    "packages/kimi/agent-delegation-0.4.1-0a817535f7a4.zip": "42f180beb63112bea0d824f409707ce37c75e2175c895af3c7e468c46e09a719",
+    "packages/kimi/deep-thinking-0.1.1-3610b1fd4915.zip": "482020d66369e10b8d17c9fd013c659b5acb983abbc49cbaf354ca122fb8b518",
+    "packages/kimi/deep-thinking-0.1.2-13c477679f56.zip": "27eea0ccba93f95386f6b476321019aab88756e6450b482d457c67fade178d64",
+    "packages/kimi/deep-thinking-0.2.0-38e322ff8bbb.zip": "fb9723d827015fb2adf2f520caaea930d2532ff9513d172b872870ca006a822e",
+    "packages/kimi/agent-delegation-0.4.0-28d3c2b54a08.zip": "d006ef37a97b27904e0c30d7cbf362bd3add07100eac5d49bd8a55e3962dadd7",
+    "packages/kimi/ultra-goal-2.16.0-7210d3a8cb22.zip": "bc99f3bdf7f4015be5e9ff14561084a84e05704876f01582a07252d8dfcbde2c",
+    "packages/kimi/task-state-with-files-0.3.0-c4a60617fdcc.zip": "f47e3c08cd59a915e7909a4e549bd5265bf393d018930f21d71547d89a22d02a",
+    "packages/kimi/ultra-goal-2.15.7-a2575a384d90.zip": "890d1db3b07d4ff142e1e4ad7eb9a78fe1240f21077620c6f568b09f363e932e",
+    "packages/kimi/ultra-goal-2.15.1-21495b62a0fc.zip": "1e1af4eae09b3e66e099e202b1be4f46be65aaa3b96e453bb3f94ad0c1ae5444",
+    "packages/kimi/agent-harness-design-0.4.0-331ba0644ec1.zip": "375cd5bef7899678d03dead9864ff41a286c290c04f35f165e94069435df0615",
+    "packages/kimi/agent-harness-design-0.4.0-88aff97c0b33.zip": "d85ca772884d0d1d8b1bafcb9139b0eb85f09d1fda06cd763de6816363c4991d",
+    "packages/kimi/task-state-with-files-0.2.1-99709a5a5e9e.zip": "8a13155ec2d76d39271164fc747d43292fefbe2bc4b14659a7ffaffba9c8044c",
+    ".agents/plugins/marketplace.json": "4233903121fee5e4d0831aea173604e6dd7c87216f65306904ccf8453c721d23",
+    ".claude-plugin/marketplace.json": "373842ffdaec022b789e02b444864bf8b21eb712b48e910a286a152854815465",
+    ".zcode-plugin/marketplace.json": "ec93d5f62a74ddbd17acf399ca1bbecbde8713757019c7d22feb93407f5eef48",
+    "marketplaces/kimi.json": "e60712c8182d23926499ed208446a4b5ac340b98d694271d4f0c72457c6de6e3",
+    "sources.json": "a040d48ae19916250414c1e79892f4a263a8ac6e5921f4b49eb2996fc4ca824f"
+  }
+}

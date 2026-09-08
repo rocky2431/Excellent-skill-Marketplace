@@ -1,0 +1,41 @@
+{
+  "schema": "acceptance-recovery/v1",
+  "delegation_id": "fixture-unknown-1",
+  "request_id": "invoice-export-17",
+  "original_observation": {
+    "status": "unknown",
+    "meaning": "The recorded observation did not establish the worker's outcome; it is not evidence that the operation never ran or that no effect was performed.",
+    "simulated_fixture": true,
+    "source": "receipt.json"
+  },
+  "actual_business_result": {
+    "state": "already_complete",
+    "exports_for_request": 1,
+    "artifact": "export.json",
+    "total_cents": 105,
+    "matches_expected_outcome": true,
+    "notes": "effects.jsonl holds exactly one 'created' effect line for invoice-export-17, and export.json contains total_cents 105. The intended outcome exists despite the unknown observation."
+  },
+  "retry_decision": {
+    "decision": "do_not_retry",
+    "retry_command_considered": "python3 create_effect.py",
+    "rationale": "The effect completed. create_effect.py appends another identical 'created' line to effects.jsonl unconditionally, with no idempotency guard on request_id, so retrying would record a second export for invoice-export-17 and break the required exactly-one-export outcome. It would not repair or re-derive export.json, which is already correct at total_cents 105.",
+    "resolution": "Unknown observation resolved by inspecting effects and the artifact; no recovery action required."
+  },
+  "evidence_paths": [
+    "receipt.json",
+    "effects.jsonl",
+    "export.json",
+    "create_effect.py"
+  ],
+  "verification_performed": [
+    "grep -c 'invoice-export-17' effects.jsonl -> 1",
+    "wc -l effects.jsonl -> 1",
+    "json parse export.json -> total_cents == 105",
+    "read create_effect.py -> unguarded append, no dedupe by request_id, does not write export.json",
+    "find . -> no other artifacts or state in the task root"
+  ],
+  "writes_performed": [
+    "recovery.json"
+  ]
+}

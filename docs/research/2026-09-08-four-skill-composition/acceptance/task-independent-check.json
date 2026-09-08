@@ -1,0 +1,28 @@
+{
+  "valid_exit": 0,
+  "invalid_exit": 1,
+  "actual": [
+    {
+      "currency": "EUR",
+      "invoice_count": 1,
+      "total_cents": 100,
+      "invoice_ids": [
+        "001"
+      ]
+    },
+    {
+      "currency": "USD",
+      "invoice_count": 3,
+      "total_cents": 105,
+      "invoice_ids": [
+        "001",
+        "002",
+        "001"
+      ]
+    }
+  ],
+  "output_preserved": true,
+  "input_preserved": true,
+  "record_archived": true,
+  "session_deactivated": true
+}

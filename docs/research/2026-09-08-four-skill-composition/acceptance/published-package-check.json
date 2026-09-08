@@ -1,0 +1,52 @@
+{
+  "package": "packages/kimi/task-state-with-files-0.4.0-73d28bc7f700.zip",
+  "result": "PASS",
+  "protected_artifacts_unchanged": 36,
+  "session_deactivated": true,
+  "native_init": {
+    "session_id": "3d5ccd25-64c9-48d5-b497-d7dcdb132140",
+    "claude_code_version": "2.1.263",
+    "plugins": [],
+    "model": "claude-opus-5[1m]"
+  },
+  "hooks": [
+    {
+      "subtype": "hook_started",
+      "hook_name": "SessionStart:startup",
+      "hook_event": "SessionStart"
+    },
+    {
+      "subtype": "hook_response",
+      "hook_name": "SessionStart:startup",
+      "hook_event": "SessionStart",
+      "exit_code": 0,
+      "outcome": "success"
+    }
+  ],
+  "native_result": {
+    "subtype": "success",
+    "is_error": false,
+    "session_id": "3d5ccd25-64c9-48d5-b497-d7dcdb132140",
+    "duration_ms": 104159
+  },
+  "business_check": {
+    "task": "release-check",
+    "task_record": ".tasks/release-check.md",
+    "date": "2026-09-08",
+    "working_directory": ".",
+    "command": "python3 acceptance/check.py",
+    "exit_code": 0,
+    "stdout": "PASS: actual CLI result, signed sum, input order and duplicate IDs; input unchanged\nPASS: signed totals, original IDs and input preservation\nPASS: task-solo A1-A4 real CLI and failure preservation\nPASS: chain-task A1-A4 real CLI and failure preservation\nPASS: saved business evidence; native host coverage is reported separately\n",
+    "stderr": "",
+    "python": "Python 3.12.10",
+    "artifact_preservation": {
+      "method": "sha256 manifest of all files under acceptance/ before and after the run",
+      "files_hashed": 36,
+      "result": "unchanged"
+    },
+    "scope": {
+      "covers": "saved business artifacts exercised by acceptance/check.py (four real CLI artifacts, signed/duplicate-ID totals, malformed-input output preservation)",
+      "does_not_cover": "installation or hook recovery on every native host; native host coverage is reported separately in acceptance/native-sessions.json"
+    }
+  }
+}

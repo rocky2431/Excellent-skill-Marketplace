@@ -1,0 +1,6 @@
+invoice_id,status,currency,amount_cents
+001,finalized,USD,120
+001,finalized,EUR,100
+002,finalized,USD,-20
+001,finalized,USD,5
+099,cancelled,USD,700

@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "delegation_id": "2451b7da752e49b18e69aa8ef00c098a",
+  "status": "success",
+  "stop_reason": "end_turn",
+  "protected_source_files_unchanged": 7,
+  "actual": [
+    {
+      "currency": "EUR",
+      "invoice_count": 1,
+      "total_cents": 100,
+      "invoice_ids": [
+        "001"
+      ]
+    },
+    {
+      "currency": "USD",
+      "invoice_count": 3,
+      "total_cents": 105,
+      "invoice_ids": [
+        "001",
+        "002",
+        "001"
+      ]
+    }
+  ],
+  "invalid_exit": 2,
+  "output_preserved": true,
+  "sole_execution_record": ".tasks/archive/invoice-summary.md"
+}

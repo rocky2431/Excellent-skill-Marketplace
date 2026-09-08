@@ -1,0 +1,74 @@
+{
+  "goal_slug": "invoice-summary-cli",
+  "status": "draft-only: not confirmed, not armed, not implemented, no business command executed",
+  "prepared": "2026-09-08",
+  "receiving_root": "/private/var/folders/cm/zpwxmr512rq1qz4_0_ryz8t80000gn/T/four-skill-acceptance-g3wlbf6c/chain-ultra",
+  "artifacts": {
+    "goal": ".goals/invoice-summary-cli.goal.md",
+    "decisions": ".goals/invoice-summary-cli.decisions.md",
+    "evaluator": "verification/invoice_acceptance.sh",
+    "workflow": null,
+    "delegation": null
+  },
+  "acceptance_ids": {
+    "A1": {"covered_by": "anchor", "state": "unclaimed", "source": "sources/brief.md, verbatim"},
+    "A2": {"covered_by": "anchor", "state": "unclaimed", "source": "sources/brief.md, verbatim"},
+    "A3": {"covered_by": "anchor", "state": "unclaimed", "source": "sources/brief.md, verbatim"},
+    "A4": {"covered_by": "review", "state": "unclaimed", "source": "sources/brief.md, verbatim"}
+  },
+  "not_acceptance": {
+    "P1..P6": "assistant proposals in docs/invoice-summary/RESULT.md; deliberately absent from Acceptance and from the anchor's checks"
+  },
+  "upstream_source": {
+    "requirements": "sources/brief.md",
+    "specification": "docs/invoice-summary/RESULT.md",
+    "research_trail": "docs/invoice-summary/THOUGHTS.md",
+    "fixtures": {
+      "sources/invoices.csv": "fed9dd1d20771e2fd2cb26000c82369148ae435c282428957caa21b35b16b830 (matches sources/input.sha256)",
+      "sources/malformed.csv": "690b34f4c8c5a7da5cbb535fa5dc7a5a7442be84d0ee8b8f97cfa5659a5efeb5 (working baseline recorded in RESULT.md; no owner-published hash)"
+    },
+    "upstream_root_named_in_result": ".../four-skill-acceptance-g3wlbf6c/deep-final (not this root; not touched)",
+    "preserved_byte_for_byte": true,
+    "no_revision_ids": "this workspace is not a Git repository"
+  },
+  "state_writer": {
+    "record": ".goals/invoice-summary-cli.goal.md",
+    "section": "## Carry-over (State / Lessons / Next)",
+    "writer": "the run's own session; single writer, no companion plan file",
+    "note": "docs/invoice-summary/THOUGHTS.md is upstream research history and stays read-only"
+  },
+  "verification_contract": {
+    "source": "owner-approved",
+    "approved_yet": false,
+    "anchor": "bash verification/invoice_acceptance.sh",
+    "anchor_budget": "2 minutes",
+    "anchor_executed": false,
+    "anchor_syntax_checked": "bash -n, clean",
+    "protected": ["verification/invoice_acceptance.sh", "sources/invoices.csv", "sources/malformed.csv", "sources/input.sha256"],
+    "required_review": {
+      "path": ".goals/invoice-summary-cli.review.json",
+      "verifiers": ["independent-reviewer"],
+      "inputs": ["invoice_summary.py", "sources/brief.md", "sources/invoices.csv", "sources/malformed.csv", "sources/input.sha256"],
+      "receipt_present": false
+    }
+  },
+  "outstanding_approval": [
+    "Checkpoints A, B and C have not been shown; no explicit owner reply exists",
+    "No `Confirm package checkpoint` row and no frozen: digest - the validator reports OWNER_CONFIRMATION_MISSING",
+    "Collaboration scope unconfirmed: no worker dispatched, no design critique run",
+    "Evaluator verification/invoice_acceptance.sh not yet inspected or accepted by the owner",
+    "Attempt ceiling (proposed 6) and native time/token budgets unconfirmed",
+    "P1-P6 undecided",
+    "Implementation authority not granted: delivery of RESULT.md did not authorize creating invoice_summary.py",
+    "Arming would need --allow-no-git in this non-Git workspace, or a reviewed Git baseline first"
+  ],
+  "validation": {
+    "command": "python3 <skill-dir>/scripts/validate_artifact.py .goals",
+    "exit_code": 1,
+    "findings": ["OWNER_CONFIRMATION_MISSING (expected for an unconfirmed draft)"],
+    "advisories": [],
+    "anchors_run": false
+  },
+  "start_command_when_authorized": "/ultra-goal:goal-run invoice-summary-cli",
+  "armed": false
+}

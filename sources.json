@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "a2575a384d90436411c34c4bd11a2a56fea3cf21",
-      "version": "2.15.7",
+      "sha": "7210d3a8cb22731e0471380c5de8e0355f5cd5ed",
+      "version": "2.16.0",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "category": "Developer Tools"
     },
@@ -17,8 +17,8 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "28d3c2b54a089b8f6db9d4f35898043cb66765cc",
-      "version": "0.4.0",
+      "sha": "0a817535f7a464dfdf6fc7bd32e3dc25b860e0fd",
+      "version": "0.4.1",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
       "category": "Productivity"
     },
@@ -27,8 +27,8 @@
       "repository": "rocky2431/plan-with-flie-skill",
       "path": "plugins/task-state-with-files",
       "ref": "main",
-      "sha": "c4a60617fdcc8be3ec21ee96d0717079ae979dae",
-      "version": "0.3.0",
+      "sha": "73d28bc7f70011ace9281d46a7a7f6a6d1925a92",
+      "version": "0.4.0",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "category": "Developer Tools"
     },
@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "13c477679f5664e03b5c016e93d4d5f92e3a5050",
-      "version": "0.1.2",
+      "sha": "38e322ff8bbbad3c8a38bc6a8c5fc15a631d2401",
+      "version": "0.2.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     }

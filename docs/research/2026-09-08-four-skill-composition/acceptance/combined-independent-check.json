@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "protected_files_unchanged": 16,
+  "readback": {
+    "current_state_record": ".tasks/paired.md",
+    "acceptance_ids": [
+      "A1",
+      "A2"
+    ],
+    "observed_sum": 5,
+    "observed_ids": [
+      "a",
+      "b",
+      "a"
+    ],
+    "next_action": "Inspect existing evidence only: read result.json, input.json, .goals/summarize.events.jsonl and .goals/summarize.goal.md and report the already-recorded state. Do not execute summarize.py or the anchor (python3 verification/check.py) for this readback; the protected check already recorded attempt 1, outcome green, exit 0. Preserve duplicate IDs and leave the source evidence, contract, implementation and verification files unmodified."
+  }
+}

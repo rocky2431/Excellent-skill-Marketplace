@@ -1,0 +1,42 @@
+{
+  "check_exit": 0,
+  "check_stdout": "PASS: actual CLI result, signed sum, input order and duplicate IDs; input unchanged\n",
+  "actual": {
+    "sum": 5,
+    "ids": [
+      "a",
+      "b",
+      "a"
+    ]
+  },
+  "verification_events": [
+    {
+      "anchor": "python3 verification/check.py",
+      "anchor_digest": "33006af3e853",
+      "blocked": false,
+      "budget_seconds": 60,
+      "budget_source": "declared",
+      "claim": "A1: python3 summarize.py input.json result.json wrote {\"sum\": 5, \"ids\": [\"a\", \"b\", \"a\"]} - signed sum (2 + -1 + 4), original row order, repeated id \"a\" kept, not deduplicated. A2: input.json sha256 f2",
+      "event": "anchor_checked",
+      "exit_code": 0,
+      "outcome": "green",
+      "output_digest": "7b2013527740",
+      "review_evidence": null,
+      "session_id": "aa4735cc-1d63-43c5-a529-6666a8634e63",
+      "signature": "green:0:7b2013527740",
+      "spec_digest": "95d0fe0d34a0",
+      "tail": "PASS: actual CLI result, signed sum, input order and duplicate IDs; input unchanged",
+      "tree_digest": null,
+      "trigger": "command",
+      "ts": "2026-09-08T04:11:55.302641+00:00",
+      "turn": 1,
+      "unrecovered_targets": [],
+      "verification_id": "a3f76c5e12a5442cb17c079c63ed275b",
+      "verification_passed": true
+    }
+  ],
+  "protected_files_unchanged": [
+    "input.json",
+    "verification/check.py"
+  ]
+}

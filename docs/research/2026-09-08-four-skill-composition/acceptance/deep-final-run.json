@@ -1,0 +1,11 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 308.2409710884094,
+  "mode": [
+    "--setting-sources",
+    "",
+    "--disable-slash-commands",
+    "--strict-mcp-config"
+  ],
+  "cwd": "/private/var/folders/cm/zpwxmr512rq1qz4_0_ryz8t80000gn/T/four-skill-acceptance-g3wlbf6c/deep-final"
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "acceptance-fixture/v1",
+  "simulated": true,
+  "delegation_id": "fixture-unknown-1",
+  "status": "unknown",
+  "request_id": "invoice-export-17",
+  "effects_file": "effects.jsonl",
+  "retry_command": "python3 create_effect.py"
+}

@@ -1,0 +1,23 @@
+{
+  "delegation_id": "7e821b32a93e4db1b7e71464ee74faf8",
+  "schema": "agent-delegation-result/v1",
+  "status": "success",
+  "stop_reason": "end_turn",
+  "terminal": true,
+  "acp_session_id": "8f3edc20-0ba2-4f21-b236-f775b574d84d",
+  "execution_seconds": 62.456,
+  "requested_model": null,
+  "receipt_path": "/Users/rocky243/.local/state/agent-delegation/runs/20260908T040258Z-7e821b32a93e4db1b7e71464ee74faf8/result.json",
+  "independent_check_exit": 0,
+  "check_stdout": "PASS: signed totals, original IDs and input preservation\n",
+  "protected_check_unchanged": true,
+  "input_unchanged": true,
+  "actual": {
+    "net": 9,
+    "ids": [
+      "001",
+      "001",
+      "002"
+    ]
+  }
+}
