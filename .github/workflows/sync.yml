@@ -1,0 +1,43 @@
+name: Sync upstream plugins
+
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream-plugins
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/catalog.py refresh
+      - run: python -m unittest discover -s tests -v
+      - name: Verify reproducible artifacts
+        run: |
+          git add -- sources.json .agents .claude-plugin .zcode-plugin marketplaces packages
+          python scripts/catalog.py build
+          git diff --exit-code -- sources.json .agents .claude-plugin .zcode-plugin marketplaces packages
+      - name: Publish updated pins and packages
+        run: |
+          if git diff --cached --quiet; then
+            echo "Upstream plugins are already current."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "chore: sync upstream plugin releases"
+          git push origin HEAD:main

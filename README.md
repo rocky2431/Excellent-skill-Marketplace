@@ -91,7 +91,7 @@ Claude Code's third-party marketplaces have auto-update disabled by default. See
 
 ## Maintain this marketplace
 
-The selected versions and full commit hashes live in [sources.json](sources.json). Make Skill changes in the upstream repository, publish them there, then update the reference here. A changed release should have a new plugin version because hosts may cache packages by version.
+The selected versions and full commit hashes live in [sources.json](sources.json). The [Sync upstream plugins workflow](.github/workflows/sync.yml) checks the upstream `main` branches hourly, at minute 17, and can also be run manually from GitHub Actions. It refreshes the pins, runs the tests, verifies reproducible artifacts, and commits and pushes updated catalogs and ZIPs only when validation passes and changes exist. GitHub may delay scheduled runs; a failed run leaves the published marketplace unchanged. A changed release should have a new plugin version because hosts may cache packages by version.
 
 With Python 3.10+ and Git installed:
 
@@ -107,7 +107,7 @@ python3 scripts/catalog.py check
 python3 -m unittest discover -s tests -v
 ```
 
-Review the diff, commit it, and push this repository. Users then refresh their marketplace and update the plugins they have chosen. Upstream pushes alone do not change the pinned versions here.
+For a local manual refresh, review the diff, commit it, and push this repository. Otherwise, the next successful automatic sync publishes upstream changes. Users then refresh their marketplace and update the plugins they have chosen.
 
 `python3 scripts/catalog.py build` rebuilds the catalogs and Kimi ZIPs from the existing pins. It does not advance them. CI rebuilds from the upstream commits and checks that the result matches the committed artifacts.
 

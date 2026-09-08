@@ -91,7 +91,7 @@ CC 的第三方市场默认不开启自动更新，具体设置见[官方说明]
 
 ## 维护这个市场
 
-[sources.json](sources.json) 记录各插件的版本和完整提交哈希。先在原仓库修改并发布 Skill，再在这里更新引用。发布内容改变时应提升插件版本，因为宿主可能按版本缓存安装包。
+[sources.json](sources.json) 记录各插件的版本和完整提交哈希。[Sync upstream plugins 工作流](.github/workflows/sync.yml) 在每小时第 17 分钟检查各源码库的 `main`，也可以在 GitHub Actions 手动运行。它更新引用、运行测试并验证制品可重复生成；只有验证通过且存在变化时，才提交并推送新目录和 ZIP。GitHub 的定时任务可能延迟；运行失败会保留当前已发布的市场。发布内容改变时应提升插件版本，因为宿主可能按版本缓存安装包。
 
 安装 Python 3.10+ 和 Git 后运行：
 
@@ -107,7 +107,7 @@ python3 scripts/catalog.py check
 python3 -m unittest discover -s tests -v
 ```
 
-检查差异，然后 commit、push 本仓库。用户刷新市场，再更新自己选择安装的插件。原仓库的 push 不会直接改变本市场锁定的版本。
+在本地手动刷新时，检查差异后 commit、push 本仓库；否则由下一次成功的自动同步发布上游变化。用户刷新市场，再更新自己选择安装的插件。
 
 `python3 scripts/catalog.py build` 根据现有提交重新生成目录和 Kimi ZIP，不会推进版本。CI 会从这些上游提交重新构建，检查结果是否与仓库内的制品一致。
 
