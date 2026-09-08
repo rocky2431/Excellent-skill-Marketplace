@@ -7,24 +7,24 @@
     {
       "name": "ultra-goal",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
-      "version": "2.15.6",
+      "version": "2.15.7",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "a5f6f17543edd4dea5d5cbe4ec1b3fcb7197ed0f",
+        "sha": "a2575a384d90436411c34c4bd11a2a56fea3cf21",
         "path": "plugins/ultra-goal"
       }
     },
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
-      "version": "0.2.1",
+      "version": "0.4.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "f9dc8b50fb24a1d83e7ad77dedaeda4bdc5c5166"
+        "sha": "28d3c2b54a089b8f6db9d4f35898043cb66765cc"
       },
       "strict": false,
       "skills": [
@@ -34,12 +34,12 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "99709a5a5e9ebaad5985817295dfbbf6fbb3225f"
+        "sha": "c4a60617fdcc8be3ec21ee96d0717079ae979dae"
       },
       "strict": false,
       "skills": [
@@ -68,7 +68,7 @@
         "source": "url",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "c3e542fd90db07ccda285c6d486506e6dee4d7ea"
+        "sha": "88aff97c0b33b9da0a39e9faf773a11eaf7739ae"
       },
       "strict": false,
       "skills": [
@@ -78,12 +78,12 @@
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "3610b1fd49150d9cbc9dc6985b1b419fd40bb063",
+        "sha": "13c477679f5664e03b5c016e93d4d5f92e3a5050",
         "path": "plugins/deep-thinking"
       }
     }
