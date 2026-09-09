@@ -62,13 +62,13 @@
     },
     {
       "name": "agent-harness-design",
-      "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
-      "version": "0.4.0",
+      "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
+      "version": "0.5.0",
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.4.0-88aff97c0b33.zip",
-        "sha256": "d85ca772884d0d1d8b1bafcb9139b0eb85f09d1fda06cd763de6816363c4991d"
+        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.0-e744f4b0acd0.zip",
+        "sha256": "194b8492b4c87d24d4b556658e5b9a7b4a506b229d0c0790ac7ee29c75cc6d46"
       }
     },
     {

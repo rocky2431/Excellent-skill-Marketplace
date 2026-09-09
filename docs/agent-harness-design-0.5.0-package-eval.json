@@ -1,0 +1,91 @@
+{
+  "completed_at": "2026-09-09T02:43:19.002863+00:00",
+  "configuration": {
+    "arms": [
+      {
+        "name": "agent-harness-design",
+        "source_sha256": "25a335fdade59170bac56994ffa7318bc9447c59de1e2e99d14f7020a38b9e91"
+      }
+    ],
+    "cases_sha256": "f1e36e584c4567e6055190b4541e53ba08066d26806d10517610b04b3404f568",
+    "host": "codex",
+    "host_cli": "codex-cli 0.153.4",
+    "model": "gpt-5.6-sol",
+    "reasoning": "low",
+    "selected_cases": [
+      "recover_pending_tool_across_context",
+      "two_models_same_tool_goal"
+    ],
+    "structured_output": "output_schema",
+    "timeout_seconds": 240,
+    "trials": 1,
+    "workers": 2
+  },
+  "grades": [],
+  "measurement_notes": [
+    "Final outputs, wall-clock duration, and host-reported token usage are measured.",
+    "Scores, passes, evidence, and winners are model-grader judgments when grading is enabled.",
+    "Ephemeral evaluation-root paths in retained final outputs are normalized to <EVAL_TMP>.",
+    "Each run uses a fresh temporary HOME, CODEX_HOME, workspace, and ephemeral Codex session with plugins, memories, hooks, and apps disabled and a read-only sandbox.",
+    "Completed commands referencing the explicit Skill copy are retained without outputs; they show requested reads, not attention or comprehension."
+  ],
+  "mode": "behavior",
+  "runs": [
+    {
+      "arm": "agent-harness-design",
+      "case": "recover_pending_tool_across_context",
+      "case_id": 29,
+      "completed_skill_commands": [
+        "/bin/zsh -lc \"sed -n '1,240p' <EVAL_TMP>/explicit-skill/SKILL.md\"",
+        "/bin/zsh -lc \"sed -n '1,280p' <EVAL_TMP>/explicit-skill/references/state-and-orchestration.md && sed -n '1,280p' <EVAL_TMP>/explicit-skill/references/failure-visibility.md\""
+      ],
+      "duration_seconds": 51.395,
+      "final_output": "The next session should resume from a durable checkpoint with the ingestion operation explicitly marked `outcome: unknown`—never failed or successful by assumption.\n\n### Restore\n\n- Research objective, scope, acceptance criteria, deadline, and current phase.\n- User authority, approvals, source-access constraints, and any later user corrections.\n- Accepted decisions, completed research, open questions, blockers, and exactly one proposed next action.\n- Canonical artifacts: source list, notes, citations, snapshots, drafts, and their versions or hashes.\n- Verified evidence separately from summaries and model-generated conclusions.\n- The pending ingestion record:\n  - operation/request ID\n  - idempotency key\n  - source identifiers and ingestion parameters\n  - submission timestamp\n  - service/job ID, if returned\n  - last confirmed response or transport event\n  - retry count and timeout status\n  - expected outputs and destination\n  - ownership or lease\n- The full tool call and any available result together. If either was lost during compaction, insert an explicit missing-data marker rather than fabricating continuity.\n\nTreat summaries as indexes into canonical artifacts, not as canonical truth. Do not attempt to reconstruct provider-private reasoning state from a prose summary.\n\n### Inspect\n\nBefore continuing research or retrying:\n\n1. Reconcile the checkpoint with the live environment.\n2. Query the ingestion service by operation ID, job ID, or idempotency key.\n3. Inspect the intended destination for resulting documents, partial writes, duplicates, timestamps, hashes, and indexing status.\n4. Determine whether the job is:\n   - still running\n   - completed and verified\n   - completed partially\n   - failed\n   - cancelled\n   - absent and safe to retry\n   - still genuinely unknown\n5. Check whether another session or worker owns the job; acquire or renew a lease before acting.\n6. Apply newer user instructions over stale checkpoint directions without discarding unrelated valid work.\n7. Confirm that credentials, tool availability, model configuration, budgets, and source permissions have not silently changed.\n\nA transport timeout or missing response is not evidence that ingestion failed.\n\n### Do\n\nUse an explicit recovery transition:\n\n```text\nUNKNOWN\n  ├─ live job running → wait/poll; continue independent research if safe\n  ├─ output complete and valid → record verified completion; consume results\n  ├─ partial output → preserve it; resume or repair using service semantics\n  ├─ confirmed failure → retry under policy\n  ├─ confirmed absent → resubmit with the same idempotency key\n  └─ unreconcilable → remain UNKNOWN; escalate or defer dependent work\n```\n\nDo not issue a blind retry. Retry only when the service guarantees idempotency or the environment proves that the original effect did not occur. If neither is possible, keep the outcome unknown and request operator intervention rather than risk duplicate ingestion.\n\nAfter reconciliation, write a new checkpoint from observed state—not the previous agent’s claim. Record the evidence used, any changed artifacts, the resulting job status, and the next action. Work that does not depend on ingestion may continue, but dependent synthesis and final completion claims must remain blocked until the source set is verified.\n\nFor a two-day run, checkpoint at every external submission, material artifact change, user correction, and phase boundary. The session should always remain recoverable into a state with an honest status and a reachable action: poll, verify, retry safely, repair, cancel, or escalate.",
+      "status": "ok",
+      "trial": 1,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 30336,
+        "input_tokens": 42454,
+        "output_tokens": 1119,
+        "reasoning_output_tokens": 51
+      }
+    },
+    {
+      "arm": "agent-harness-design",
+      "case": "two_models_same_tool_goal",
+      "case_id": 31,
+      "completed_skill_commands": [
+        "/bin/zsh -lc \"sed -n '1,240p' <EVAL_TMP>/explicit-skill/SKILL.md\"",
+        "/bin/zsh -lc \"sed -n '1,280p' <EVAL_TMP>/explicit-skill/references/model-adaptation.md\"",
+        "/bin/zsh -lc \"sed -n '1,280p' <EVAL_TMP>/explicit-skill/references/models/openai.md && sed -n '1,320p' <EVAL_TMP>/explicit-skill/references/models/google.md && sed -n '1,240p' <EVAL_TMP>/explicit-skill/references/architecture-guide.md\""
+      ],
+      "duration_seconds": 93.623,
+      "final_output": "No. Keep one provider-neutral agent contract, but use provider-native execution adapters.\n\n| Concern | GPT-6 Astra | Gemini 3 |\n|---|---|---|\n| API | OpenAI **Responses API** | Gemini **Interactions API**, stateful mode |\n| Continuation | Structured response/tool events; continue using the native response state | `store: true` plus `previous_interaction_id` |\n| Tool results | Return the observation against the original `call_id`; `async: true` is optional for slow searches | Return a structured `function_result` step and continue from the preceding interaction |\n| Temperature | Omit it: Astra does not support `temperature`, `top_p`, or `top_logprobs` | Omit it and retain Gemini 3’s default `1.0`; Google warns that lower values can cause looping or degraded reasoning |\n| History | Preserve native response items, tool calls, and identifiers | Server manages history and encrypted thought signatures |\n| Manual flattening | No | No |\n\nThese interface details were checked against the providers’ documentation on September 9, 2026. OpenAI explicitly says Astra tool calling requires Responses even though the model also supports Chat Completions, and instructs users to remove `temperature`. [OpenAI GPT-6 Astra guidance](https://developers.openai.com/api/docs/guides/latest-model)\n\nFor Gemini 3, stateful Interactions automatically preserve conversation history and thought signatures. Settings such as tools, system instructions, thinking level, and temperature are interaction-scoped, so your adapter must send them again on each continuation. [Gemini 3 guide](https://ai.google.dev/gemini-api/docs/gemini-3), [Interactions state management](https://ai.google.dev/gemini-api/docs/interactions-overview)\n\n### Shared architecture\n\nUse a common semantic loop:\n\n```text\nuser question + read scope\n        ↓\nmodel requests search(query)\n        ↓\ntrusted runtime validates scope\n        ↓\nread-only search backend returns passages + source IDs\n        ↓\nprovider adapter returns a structured tool observation\n        ↓\nmodel searches again or answers with supporting sources\n```\n\nThe shared layer should own:\n\n- The goal and acceptance rule: answer the question using identifiable search evidence.\n- Authority: only approved collections, domains, or indexes may be searched.\n- A provider-neutral tool contract such as `search(query, filters, limit)`.\n- Runtime enforcement of read-only access. Do not rely on the prompt; expose no mutation tools or write-capable credentials.\n- Source-aware results, typed errors, timeouts, and empty-result distinctions.\n- Durable application state: user request, allowed scope, evidence references, pending operations, final status, and audit trace.\n- Completion validation: a finished tool call is not automatically a finished answer.\n\nThe adapter can translate a small internal event model—`user_input`, `tool_call`, `tool_result`, `model_output`, `error`—but it must retain the complete provider-native objects needed for continuation. A flattened transcript loses call identities and, for Gemini, required reasoning-state signatures.\n\n### Concrete adapter behavior\n\nFor Astra:\n\n```text\nresponses.create(\n  model=\"gpt-6-astra\",\n  tools=[search_tool],\n  reasoning={\"effort\": \"low\"}   # reasonable starting point; evaluate\n)\n```\n\nExecute each requested search within the trusted runtime and return its result using the original `call_id`. Use asynchronous tool calling only if search latency makes it useful; the application remains responsible for pending-operation records and recovery.\n\nFor Gemini:\n\n```text\ninteractions.create(\n  model=<exact Gemini 3 model ID>,\n  store=true,\n  tools=[search_tool],\n  generation_config={...}       # omit temperature\n)\n```\n\nAfter each turn, retain its interaction ID. Send the next input or function result with `previous_interaction_id`, while resupplying the tools and system instruction. Server-side state is convenient conversation state, not your durable source of truth; retention limits and provider outages still require an application-level work record.\n\n“Gemini 3” is a family rather than a deployment-ready model identifier, so pin the exact supported model or preview ID before testing. Then run a full search round trip on each adapter and compare answer correctness, citation coverage, loops, latency, and cost. Identical temperature values would not create a fair comparison—and `0.1` is invalid guidance for both target configurations.",
+      "status": "ok",
+      "trial": 1,
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 90752,
+        "input_tokens": 118853,
+        "output_tokens": 2103,
+        "reasoning_output_tokens": 395
+      }
+    }
+  ],
+  "schema_version": 1,
+  "started_at": "2026-09-09T02:41:45.295738+00:00",
+  "stop_reason": null,
+  "summary": {
+    "agent-harness-design": {
+      "completed_runs": 2,
+      "graded_pass_rate": null,
+      "input_tokens": 161307,
+      "mean_duration_seconds": 72.509,
+      "mean_grade": null,
+      "output_tokens": 3222,
+      "successful_runs": 2,
+      "wins": 0
+    }
+  }
+}

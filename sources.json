@@ -37,9 +37,9 @@
       "repository": "rocky2431/agent-harness-design-skill",
       "path": "plugins/agent-harness-design",
       "ref": "main",
-      "sha": "88aff97c0b33b9da0a39e9faf773a11eaf7739ae",
-      "version": "0.4.0",
-      "description": "Design and review agent execution layers, including tools, authority, context recovery and verification.",
+      "sha": "e744f4b0acd06290171f8c8888bced9fddb9d446",
+      "version": "0.5.0",
+      "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "category": "Developer Tools"
     },
     {
