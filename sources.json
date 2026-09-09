@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "7210d3a8cb22731e0471380c5de8e0355f5cd5ed",
-      "version": "2.16.0",
+      "sha": "c080e162ac1693f8fa760347a4f60201e6dda703",
+      "version": "2.17.0",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "category": "Developer Tools"
     },
@@ -17,8 +17,8 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "0a817535f7a464dfdf6fc7bd32e3dc25b860e0fd",
-      "version": "0.4.1",
+      "sha": "e6c730413452411715696c79d7c4f6bc0eeee447",
+      "version": "0.5.0",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
       "category": "Productivity"
     },
