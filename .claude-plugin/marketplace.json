@@ -19,12 +19,12 @@
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
-      "version": "0.5.0",
+      "version": "0.6.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "e6c730413452411715696c79d7c4f6bc0eeee447"
+        "sha": "ca22baaab5b932432f143179f4db61826a52a41a"
       },
       "strict": false,
       "skills": [

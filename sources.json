@@ -17,8 +17,8 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "e6c730413452411715696c79d7c4f6bc0eeee447",
-      "version": "0.5.0",
+      "sha": "ca22baaab5b932432f143179f4db61826a52a41a",
+      "version": "0.6.1",
       "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
       "category": "Productivity"
     },

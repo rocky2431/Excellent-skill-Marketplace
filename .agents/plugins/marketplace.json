@@ -25,7 +25,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "e6c730413452411715696c79d7c4f6bc0eeee447",
+        "sha": "ca22baaab5b932432f143179f4db61826a52a41a",
         "path": "plugins/agent-delegation"
       },
       "policy": {
