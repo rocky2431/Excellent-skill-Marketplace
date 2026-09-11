@@ -5,10 +5,10 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.17.0",
+      "version": "2.17.1",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.17.0-c080e162ac16.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.17.1-e66634952bc8.zip"
     },
     {
       "id": "agent-delegation",
@@ -45,10 +45,10 @@
       "displayName": "deep-thinking",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "homepage": "https://github.com/rocky2431/deepthink-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.2.0-38e322ff8bbb.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.2.1-25f4607a379b.zip"
     }
   ]
 }

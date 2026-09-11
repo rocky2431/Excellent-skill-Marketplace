@@ -7,12 +7,12 @@
     {
       "name": "ultra-goal",
       "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
-      "version": "2.17.0",
+      "version": "2.17.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "c080e162ac1693f8fa760347a4f60201e6dda703",
+        "sha": "e66634952bc8e827b0f13f740d486dcc4dd58f8a",
         "path": "plugins/ultra-goal"
       }
     },
@@ -78,12 +78,12 @@
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "38e322ff8bbbad3c8a38bc6a8c5fc15a631d2401",
+        "sha": "25f4607a379b24530e89a66342fe887c862c80f3",
         "path": "plugins/deep-thinking"
       }
     }
