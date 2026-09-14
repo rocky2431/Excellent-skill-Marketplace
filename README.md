@@ -70,13 +70,19 @@ Choose a plugin and install it. Each entry points to a ZIP containing the plugin
 
 UltraGoal and Task State use Python scripts. Make `python3` available to the host. Read the upstream instructions for supported Python versions, goal setup, and hook behavior.
 
-Agent Delegation also needs the `agent-delegate` CLI, its ACP dependencies, and the agents you want to use. Installing its marketplace plugin loads the Skill; it does not configure those runtimes. Follow the [upstream runtime installation instructions](https://github.com/rocky2431/agent-delegate-skill#安装模型).
+Agent Delegation also needs configured ACP dependencies and the agents you want to use. Its executing script belongs to the loaded Skill package; installing the plugin does not configure those runtimes. Follow the [upstream runtime installation instructions](https://github.com/rocky2431/agent-delegate-skill#install-and-start).
 
 Task State includes a `SessionStart` recovery hook on Codex, Claude Code, and zCode. Its Kimi package restores a bounded state excerpt through `UserPromptSubmit` whenever you send a message, including after resuming a session. Kimi 0.41.0 does not inject returned text from `SessionStart` or `PostCompact`, so this does not guarantee immediate recovery during autonomous compaction. UltraGoal includes its own Kimi hooks, whose continuation limits are described in its README.
 
 See the [2026-09-06 host compatibility review](docs/host-compatibility-2026-09-06.md) (Chinese) for the tested paths and their limits.
 
 If you already installed a plugin from its individual marketplace, disable or uninstall that copy before enabling the same plugin here. Two enabled copies can load duplicate Skills or run the same hooks twice. Check your host's installed-plugin list before changing anything.
+
+Keep one active package per host: instructions, scripts, and hooks should update
+together through that host's plugin manager. Retire old user Skill copies and their
+managed hooks when migrating to a plugin. Hosts without native plugin support can
+keep one portable Skill installation. Shared dependencies and receipts are separate
+from the Skill implementation; do not treat them as duplicate packages.
 
 ## Updates
 

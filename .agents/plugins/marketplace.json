@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "e66634952bc8e827b0f13f740d486dcc4dd58f8a",
+        "sha": "6168de2425ea751f98342f249c925a75998144c2",
         "path": "plugins/ultra-goal"
       },
       "policy": {
@@ -25,7 +25,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "ca22baaab5b932432f143179f4db61826a52a41a",
+        "sha": "e50c62887f0c43d8b3f3be28e98caa61c9cd0dad",
         "path": "plugins/agent-delegation"
       },
       "policy": {
@@ -40,7 +40,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "73d28bc7f70011ace9281d46a7a7f6a6d1925a92",
+        "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8",
         "path": "plugins/task-state-with-files"
       },
       "policy": {
@@ -55,7 +55,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "e744f4b0acd06290171f8c8888bced9fddb9d446",
+        "sha": "52a65adaed22311e757a6a4d69e38ee300c33e77",
         "path": "plugins/agent-harness-design"
       },
       "policy": {

@@ -7,9 +7,9 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "e66634952bc8e827b0f13f740d486dcc4dd58f8a",
-      "version": "2.17.1",
-      "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
+      "sha": "6168de2425ea751f98342f249c925a75998144c2",
+      "version": "2.18.0",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "category": "Developer Tools"
     },
     {
@@ -17,9 +17,9 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "ca22baaab5b932432f143179f4db61826a52a41a",
-      "version": "0.6.1",
-      "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
+      "sha": "e50c62887f0c43d8b3f3be28e98caa61c9cd0dad",
+      "version": "0.6.2",
+      "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "category": "Productivity"
     },
     {
@@ -27,8 +27,8 @@
       "repository": "rocky2431/plan-with-flie-skill",
       "path": "plugins/task-state-with-files",
       "ref": "main",
-      "sha": "73d28bc7f70011ace9281d46a7a7f6a6d1925a92",
-      "version": "0.4.0",
+      "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8",
+      "version": "0.4.1",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "category": "Developer Tools"
     },
@@ -37,8 +37,8 @@
       "repository": "rocky2431/agent-harness-design-skill",
       "path": "plugins/agent-harness-design",
       "ref": "main",
-      "sha": "e744f4b0acd06290171f8c8888bced9fddb9d446",
-      "version": "0.5.0",
+      "sha": "52a65adaed22311e757a6a4d69e38ee300c33e77",
+      "version": "0.5.1",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "category": "Developer Tools"
     },

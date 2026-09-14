@@ -5,40 +5,40 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.17.1",
-      "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
+      "version": "2.18.0",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.17.1-e66634952bc8.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.18.0-6168de2425ea.zip"
     },
     {
       "id": "agent-delegation",
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.6.1",
-      "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
+      "version": "0.6.2",
+      "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.6.1-ca22baaab5b9.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.6.2-e50c62887f0c.zip"
     },
     {
       "id": "task-state-with-files",
       "displayName": "task-state-with-files",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "homepage": "https://github.com/rocky2431/plan-with-flie-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.4.0-73d28bc7f700.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.4.1-e7588e4d9054.zip"
     },
     {
       "id": "agent-harness-design",
       "displayName": "agent-harness-design",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "homepage": "https://github.com/rocky2431/agent-harness-design-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.0-e744f4b0acd0.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.1-52a65adaed22.zip"
     },
     {
       "id": "deep-thinking",

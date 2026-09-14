@@ -82,7 +82,10 @@ record. A wait timeout ends one observation: keep watching the same ID. If execu
 is unknown, inspect native state and actual effects before retrying. A normal model
 turn (`success`) and a business check passing are separate facts.
 
-UltraGoal's command hook observes recognized direct `agent-delegate run` calls only.
+UltraGoal's command hook observes recognized direct `agent-delegate run` calls and
+the bundled `python3 "/absolute/skill/scripts/agent_delegate.py" run` form. Resolve
+the script from the caller host's loaded Agent Delegation Skill, not another host's
+cache or an independently installed global implementation.
 The asynchronous `submit`/`wait`/`status` path and shell wrappers require the caller to
 read terminal receipts. Missing hook events do not prove success. Required independent
 review still needs its own current evidence; a transport receipt cannot replace it.

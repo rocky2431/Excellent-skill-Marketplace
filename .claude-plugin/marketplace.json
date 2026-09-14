@@ -6,25 +6,25 @@
   "plugins": [
     {
       "name": "ultra-goal",
-      "description": "Define an executable goal, its evidence and boundaries, then check explicit completion claims with host hooks.",
-      "version": "2.17.1",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
+      "version": "2.18.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "e66634952bc8e827b0f13f740d486dcc4dd58f8a",
+        "sha": "6168de2425ea751f98342f249c925a75998144c2",
         "path": "plugins/ultra-goal"
       }
     },
     {
       "name": "agent-delegation",
-      "description": "Delegate missions between local agents and inspect their results. Requires the agent-delegate CLI and its ACP dependencies.",
-      "version": "0.6.1",
+      "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
+      "version": "0.6.2",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "ca22baaab5b932432f143179f4db61826a52a41a"
+        "sha": "e50c62887f0c43d8b3f3be28e98caa61c9cd0dad"
       },
       "strict": false,
       "skills": [
@@ -34,12 +34,12 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "73d28bc7f70011ace9281d46a7a7f6a6d1925a92"
+        "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8"
       },
       "strict": false,
       "skills": [
@@ -63,12 +63,12 @@
     {
       "name": "agent-harness-design",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
-      "version": "0.5.0",
+      "version": "0.5.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "e744f4b0acd06290171f8c8888bced9fddb9d446"
+        "sha": "52a65adaed22311e757a6a4d69e38ee300c33e77"
       },
       "strict": false,
       "skills": [
