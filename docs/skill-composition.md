@@ -75,6 +75,80 @@ use `documents/<work-id>/`. Existing `thinking/` inquiries, `.tasks/`, `.goals/`
 private runtime receipts stay at their valid paths. Only create files that this task
 needs; links and IDs cannot transfer uncommitted files to another workspace.
 
+Keep the explicitly selected record, then reuse a fitting existing document or section,
+then use the invoked Skill's standalone default. Arming UltraGoal does not transfer
+ownership. Match task identity and scope, not recency or installed Skills.
+Deep Thinking preserves working reasoning and an independently understandable
+result; its standalone defaults remain `THOUGHTS.md` and `RESULT.md`, while bounded
+embedded inquiries can reuse existing sections. Task State preserves borrowed headings,
+edits only mutable state and follows that document's lifecycle, without moving a goal
+into `.tasks/archive/`. Goals retain their paired decisions and frozen clauses.
+
+| Selected capabilities | Current content and necessary artifacts |
+|---|---|
+| Deep Thinking | Inquiry state and reasoning; an independently understandable result |
+| Task State | One existing record or the standalone `.tasks/<id>.md` |
+| UltraGoal | Confirmed goal, paired decisions, Carry-over and actual acceptance evidence |
+| Deep Thinking + Task State | Maintain the inquiry record in place; retain the needed result |
+| Deep Thinking + UltraGoal | Research informs terms; selected record or Carry-over owns main task state |
+| Task State + UltraGoal | Maintain Carry-over, or retain an existing note referenced by Carry-over |
+| All three | Reuse the same direction, plan, goal and state; add research only for a distinct purpose |
+
+This describes content ownership, not fixed file counts. A research branch can track
+its own question and evidence; the main record retains its relevance, handoff and
+integrated result without copying its entire ledger. An independently delivered or
+versioned report remains separately readable. Each installed package carries its own
+minimum reuse rules; this Marketplace document is not a runtime dependency.
+
+## Connect direction, milestones and current work
+
+Preserve owner intent above the adopted approach, and the approach above current state.
+These are scope relationships, not one Skill per time horizon or a new file hierarchy.
+
+| Information | Existing source to reuse | Read or revise when |
+|---|---|---|
+| Long-term direction and boundaries | Adopted project intent; optionally `NORTH_STAR.md` when actually needed | Planning, material owner steering or a new phase |
+| Medium-term outcomes and approach | Adopted result/plan or roadmap, with milestone exit conditions | Milestone transition or changed approach assumptions |
+| Current milestone's goal | Existing task terms; confirmed `.goal.md` when using UltraGoal | Execution, recovery, review; frozen changes use explicit Modify |
+| Current understanding and progress | One chosen record and writer | Evidence changes, work advances, recovery or handoff |
+
+An adopted `RESULT.md` can itself be the plan. Do not copy it into a second plan or
+invent absent project layers for a simple task. Cite applicable upstream sources by
+path/section and date or revision in the existing record; no relationship registry is
+needed. File location does not grant authority or automatic host loading.
+
+A milestone may be one goal or contain several independently accepted outcomes;
+ordinary steps do not each require a goal. Lower-level goals explain their contribution,
+and the parent links acceptance evidence rather than daily task lists. A completed step
+does not prove milestone completion or long-term value. Frozen goal clauses retain
+their confirmed meaning locally, with source references as supplements, never mutable
+links in place of Intent, Boundary or Acceptance.
+
+New evidence revises supported judgments and authorized means. Explicit owner revisions
+to direction, scope or success criteria trigger review of affected milestones and goals
+through their existing change process. Preserve unaffected work and evidence whose
+conditions still hold. Candidate recommendations do not silently become requirements.
+
+## Separate state ownership from recovery
+
+Choose one recovery provider for each selected task using existing bindings. If UltraGoal
+restores its contract and an external state locator, the agent reads that state in full;
+Task State can maintain it without also activating its hook. Deactivate only that session's
+Task State selection when switching, or change its host launch selector when applicable.
+Other tasks and sessions retain their selections. There is no shared runtime, registry
+or automatic cross-plugin arbitration.
+
+External Carry-over keeps an accessible state path, necessary run facts and an explicit
+Next instruction to read, reconcile and then act on that record. Any last-observed action
+summary names its source and time/revision; it is derived context, not a competing list.
+References must terminate in real content. Keep original observations, confirmation and
+independent review evidence separately identifiable; summaries do not replace receipts.
+
+Large Task State previews prioritize Current understanding, Current position and Carry-over
+when whole sections fit. A partial preview still requires reading the complete record;
+an oversized section is not silently treated as absent work. Host behavior needs direct
+verification, beyond merely inspecting the generated recovery text.
+
 ## Interpret delegation results at the consumer
 
 Retain `delegation_id`, the terminal receipt and output references in the existing

@@ -5,10 +5,10 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.18.0",
+      "version": "2.19.0",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.18.0-6168de2425ea.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.19.0-5d860223b625.zip"
     },
     {
       "id": "agent-delegation",
@@ -25,10 +25,10 @@
       "displayName": "task-state-with-files",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "homepage": "https://github.com/rocky2431/plan-with-flie-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.4.1-e7588e4d9054.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.5.0-5bfe9129faac.zip"
     },
     {
       "id": "agent-harness-design",
@@ -45,10 +45,10 @@
       "displayName": "deep-thinking",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "homepage": "https://github.com/rocky2431/deepthink-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.2.1-25f4607a379b.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.3.0-f60c6012312c.zip"
     }
   ]
 }

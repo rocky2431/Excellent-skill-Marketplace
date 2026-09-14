@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "6168de2425ea751f98342f249c925a75998144c2",
+        "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
         "path": "plugins/ultra-goal"
       },
       "policy": {
@@ -40,7 +40,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8",
+        "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f",
         "path": "plugins/task-state-with-files"
       },
       "policy": {
@@ -70,7 +70,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "25f4607a379b24530e89a66342fe887c862c80f3",
+        "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
         "path": "plugins/deep-thinking"
       },
       "policy": {

@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "6168de2425ea751f98342f249c925a75998144c2",
-      "version": "2.18.0",
+      "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
+      "version": "2.19.0",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "category": "Developer Tools"
     },
@@ -27,8 +27,8 @@
       "repository": "rocky2431/plan-with-flie-skill",
       "path": "plugins/task-state-with-files",
       "ref": "main",
-      "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8",
-      "version": "0.4.1",
+      "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f",
+      "version": "0.5.0",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "category": "Developer Tools"
     },
@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "25f4607a379b24530e89a66342fe887c862c80f3",
-      "version": "0.2.1",
+      "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
+      "version": "0.3.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     }

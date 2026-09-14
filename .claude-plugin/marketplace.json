@@ -7,12 +7,12 @@
     {
       "name": "ultra-goal",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
-      "version": "2.18.0",
+      "version": "2.19.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "6168de2425ea751f98342f249c925a75998144c2",
+        "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
         "path": "plugins/ultra-goal"
       }
     },
@@ -34,12 +34,12 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "e7588e4d90542314eac1fad423b67ae5175b2be8"
+        "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f"
       },
       "strict": false,
       "skills": [
@@ -78,12 +78,12 @@
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "25f4607a379b24530e89a66342fe887c862c80f3",
+        "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
         "path": "plugins/deep-thinking"
       }
     }
