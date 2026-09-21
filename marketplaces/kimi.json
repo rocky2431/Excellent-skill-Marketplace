@@ -15,10 +15,10 @@
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.6.4",
+      "version": "0.7.0",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.6.4-e85a8f92742f.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.7.0-3a07a83319b1.zip"
     },
     {
       "id": "task-state-with-files",
