@@ -86,12 +86,12 @@
     {
       "name": "building-rules",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
-      "version": "0.1.0",
+      "version": "0.1.2",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/building-rule-skill.git",
         "ref": "main",
-        "sha": "e2d22e5c9467fc5f0af1c8351c5663e61647fb47",
+        "sha": "ec4a459b01b1700d023250ee8ef9d67e06bd9dfb",
         "path": "plugins/building-rules"
       }
     }
