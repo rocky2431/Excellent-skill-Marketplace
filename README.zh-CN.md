@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-这是一个供 Codex、Claude Code、zCode 和 Kimi Code 使用的插件市场，收录了五个插件。添加市场后，按需选择安装。
+这是一个供 Codex、Claude Code、zCode 和 Kimi Code 使用的插件市场，收录了六个插件。添加市场后，按需选择安装。
 
 每个插件保留自己的源码仓库、版本和发布节奏。本仓库记录选定的提交，提供各宿主能读取的市场目录，并根据这些提交生成 Kimi 安装包。
 
@@ -17,6 +17,7 @@
 | `task-state-with-files` | 把任务进度保存在文件里，便于新会话或上下文压缩后恢复。 | [Task State with Files](https://github.com/rocky2431/plan-with-flie-skill) |
 | `agent-harness-design` | 设计和审查 Agent 的工具、权限、上下文恢复与验证机制。 | [Agent Harness Design](https://github.com/rocky2431/agent-harness-design-skill) |
 | `deep-thinking` | 澄清想法、研究证据、检验不同观点，形成有依据的结论。 | [Deep Thinking](https://github.com/rocky2431/deepthink-skill) |
+| `building-rules` | 指导功能开发、修复、重构和代码审查，控制调查与验证的必要投入。 | [Building Rules](https://github.com/rocky2431/building-rule-skill) |
 
 这些插件可以自由组合。安装其中一个，不会连带安装其余插件。
 
@@ -68,7 +69,7 @@ https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/.zc
 
 ## 使用前需要知道
 
-UltraGoal 和 Task State 使用 Python 脚本，请让宿主能够执行 `python3`。支持的 Python 版本、目标设置和 Hook 行为见各自仓库的说明。
+UltraGoal、Task State 和 Building Rules 使用 Python 脚本，请让宿主能够执行 `python3`。支持的 Python 版本、目标设置和 Hook 行为见各自仓库的说明。
 
 Agent Delegation 还需要 `agent-delegate` 命令、ACP 依赖，以及你打算调用的 Agent。安装市场插件只会加载 Skill，不会替你配置这些运行环境。请按[原仓库的运行环境安装说明](https://github.com/rocky2431/agent-delegate-skill#安装模型)完成配置。
 

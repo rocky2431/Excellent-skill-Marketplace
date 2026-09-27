@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-A shared catalog of five plugins for Codex, Claude Code, zCode, and Kimi Code. Add the marketplace in your agent, then install the plugins you want.
+A shared catalog of six plugins for Codex, Claude Code, zCode, and Kimi Code. Add the marketplace in your agent, then install the plugins you want.
 
 Each plugin keeps its own source repository, version, and release schedule. This repository records the selected commits and provides the catalog format each host reads. Kimi packages are generated from those commits.
 
@@ -17,6 +17,7 @@ The four workflow Skills can be used independently or composed through existing 
 | `task-state-with-files` | Keep task progress in files so an agent can recover after a new session or compaction. | [Task State with Files](https://github.com/rocky2431/plan-with-flie-skill) |
 | `agent-harness-design` | Design and review an agent's tools, authority, context recovery, and verification. | [Agent Harness Design](https://github.com/rocky2431/agent-harness-design-skill) |
 | `deep-thinking` | Clarify ideas, research evidence, examine competing views, and form a defensible conclusion. | [Deep Thinking](https://github.com/rocky2431/deepthink-skill) |
+| `building-rules` | Deliver features, fixes, refactors, and code reviews with proportionate investigation and verification. | [Building Rules](https://github.com/rocky2431/building-rule-skill) |
 
 You can install any combination. Installing one plugin does not install the others.
 
@@ -68,7 +69,7 @@ Choose a plugin and install it. Each entry points to a ZIP containing the plugin
 
 ## Before using the plugins
 
-UltraGoal and Task State use Python scripts. Make `python3` available to the host. Read the upstream instructions for supported Python versions, goal setup, and hook behavior.
+UltraGoal, Task State, and Building Rules use Python scripts. Make `python3` available to the host. Read the upstream instructions for supported Python versions, goal setup, and hook behavior.
 
 Agent Delegation also needs configured ACP dependencies and the agents you want to use. Its executing script belongs to the loaded Skill package; installing the plugin does not configure those runtimes. Follow the [upstream runtime installation instructions](https://github.com/rocky2431/agent-delegate-skill#install-and-start).
 

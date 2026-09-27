@@ -45,6 +45,37 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(0, result.returncode, result.stderr)
             self.assertIn("PACKAGED-RECOVERY-MARKER", result.stdout)
 
+    def test_building_rules_package_executes_native_hooks(self):
+        plugin = next(p for p in catalog.load_sources()["plugins"] if p["name"] == "building-rules")
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "plugin with spaces"
+            with zipfile.ZipFile(catalog.ROOT / catalog.package_path(plugin)) as archive:
+                archive.extractall(package)
+            skill = package / "skills/building-rules"
+            core = (skill / "references/core.md").read_text()
+            hooks = json.loads((package / "hooks/hooks.json").read_text())["hooks"]
+            kimi = json.loads((package / "kimi.plugin.json").read_text())
+            variables = {"codex": "PLUGIN_ROOT", "claude": "CLAUDE_PLUGIN_ROOT",
+                         "zcode": "ZCODE_PLUGIN_ROOT"}
+            env = {k: v for k, v in os.environ.items() if k not in variables.values()}
+            for host in ("codex", "claude", "zcode", "kimi"):
+                with self.subTest(host=host):
+                    event = "UserPromptSubmit" if host == "kimi" else "SessionStart"
+                    command = (next(h["command"] for h in kimi["hooks"] if h["event"] == event)
+                               if host == "kimi" else hooks[event][0]["hooks"][0]["command"])
+                    host_env = env if host == "kimi" else {**env, variables[host]: str(package)}
+                    result = subprocess.run(command, shell=True, cwd=package, env=host_env,
+                                            input=json.dumps({"hook_event_name": event, "source": "resume"}),
+                                            capture_output=True, text=True, timeout=10)
+                    self.assertEqual((0, ""), (result.returncode, result.stderr))
+                    context = result.stdout
+                    if host != "kimi":
+                        output = json.loads(context)["hookSpecificOutput"]
+                        self.assertEqual(event, output["hookEventName"])
+                        context = output["additionalContext"]
+                    self.assertIn(core, context)
+                    self.assertIn(str(skill.resolve() / "SKILL.md"), context)
+
     def test_shipped_task_selection_is_scoped_and_hooks_are_read_only(self):
         plugin = next(p for p in catalog.load_sources()["plugins"] if p["name"] == "task-state-with-files")
         with tempfile.TemporaryDirectory() as temporary:
@@ -94,11 +125,12 @@ class CatalogTests(unittest.TestCase):
                 {p["name"]: p.get("version") for p in entries},
                 host,
             )
-            thinking = next(p for p in entries if p["name"] == "deep-thinking")
-            self.assertEqual("git-subdir", thinking["source"]["source"])
-            self.assertEqual("plugins/deep-thinking", thinking["source"]["path"])
-            self.assertNotIn("strict", thinking)
-            self.assertNotIn("skills", thinking)
+            for name in ("deep-thinking", "building-rules"):
+                native = next(p for p in entries if p["name"] == name)
+                self.assertEqual("git-subdir", native["source"]["source"])
+                self.assertEqual(f"plugins/{name}", native["source"]["path"])
+                self.assertNotIn("strict", native)
+                self.assertNotIn("skills", native)
             task = next(p for p in entries if p["name"] == "task-state-with-files")
             self.assertFalse(task["strict"])
             command = task["hooks"]["SessionStart"][0]["hooks"][0]["command"]

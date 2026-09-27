@@ -49,6 +49,16 @@
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "homepage": "https://github.com/rocky2431/deepthink-skill",
       "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.3.0-f60c6012312c.zip"
+    },
+    {
+      "id": "building-rules",
+      "displayName": "building-rules",
+      "type": "plugin",
+      "tier": "curated",
+      "version": "0.1.0",
+      "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
+      "homepage": "https://github.com/rocky2431/building-rule-skill",
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.1.0-e2d22e5c9467.zip"
     }
   ]
 }

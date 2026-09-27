@@ -51,6 +51,16 @@
       "version": "0.3.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
+    },
+    {
+      "name": "building-rules",
+      "repository": "rocky2431/building-rule-skill",
+      "path": "plugins/building-rules",
+      "ref": "main",
+      "sha": "e2d22e5c9467fc5f0af1c8351c5663e61647fb47",
+      "version": "0.1.0",
+      "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
+      "category": "Developer Tools"
     }
   ]
 }
