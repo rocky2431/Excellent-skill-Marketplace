@@ -119,7 +119,7 @@ def git_source(plugin: dict, *, subtree: bool = True) -> dict:
 def claude_entry(plugin: dict, host: str) -> dict:
     entry = {"name": plugin["name"], "description": plugin["description"],
              "version": plugin["version"]}
-    if plugin["name"] in {"ultra-goal", "deep-thinking", "building-rules"}:
+    if plugin["name"] in {"ultra-goal", "deep-thinking", "building-rules", "awesome-html"}:
         entry["source"] = git_source(plugin)
         return entry
     # These upstream projects ship Codex manifests. The marketplace supplies the

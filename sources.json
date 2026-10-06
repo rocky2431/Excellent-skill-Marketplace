@@ -61,6 +61,16 @@
       "version": "0.1.2",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
       "category": "Developer Tools"
+    },
+    {
+      "name": "awesome-html",
+      "repository": "rocky2431/awesome-html-skill",
+      "path": "plugins/awesome-html",
+      "ref": "main",
+      "sha": "eaf44421363dbb583043ea60313afec366448f88",
+      "version": "0.1.0",
+      "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
+      "category": "Productivity"
     }
   ]
 }

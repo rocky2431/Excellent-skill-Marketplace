@@ -2,7 +2,7 @@
 
 ## Repository map
 
-This repository is the coordination and distribution entry point for six
+This repository is the coordination and distribution entry point for seven
 independent Skill source repositories. Local checkouts are siblings, not submodules
 or vendored source. Resolve these paths relative to this repository; verify the Git
 root and remote before editing. If a checkout is missing, locate it before proceeding.
@@ -15,6 +15,7 @@ root and remote before editing. If a checkout is missing, locate it before proce
 | `ultra-goal` | `../ultra-goal-skill` | Prepare complete goal contracts, coordinate execution, preserve continuity, and evaluate completion evidence. |
 | `agent-harness-design` | `../Agent-harness-design-skill` | Maintain evolving methods and evidence for designing and evaluating Agent systems and their execution layers. |
 | `building-rules` | `../building-rule-skill` | Guide feature delivery, debugging, refactoring and code review with proportionate engineering effort. |
+| `awesome-html` | `../awesome-html-skill` | Build self-contained single-file HTML pages that open offline, with templates and an offline render check. |
 
 Each source repository owns its implementation, tests, version, and releases.
 [sources.json](sources.json) owns the marketplace's selected repositories, plugin
@@ -30,6 +31,8 @@ Skills. Agent Harness Design is independently maintained alongside them and is u
 when the Agent system itself is the design or evaluation target.
 Building Rules independently supplies engineering methods for implementation and
 review; it does not own task state or add authority and acceptance requirements.
+Awesome HTML independently produces single-file HTML deliverables; it does not own
+task records, and a tracker page it generates is a read-only view of an existing record.
 
 - Preserve complete standalone use of each Skill; other Skills are optional reuse.
 - UltraGoal retains its own clarification, necessary research, continuity,

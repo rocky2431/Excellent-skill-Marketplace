@@ -59,6 +59,16 @@
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
       "homepage": "https://github.com/rocky2431/building-rule-skill",
       "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.1.2-ec4a459b01b1.zip"
+    },
+    {
+      "id": "awesome-html",
+      "displayName": "awesome-html",
+      "type": "plugin",
+      "tier": "curated",
+      "version": "0.1.0",
+      "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
+      "homepage": "https://github.com/rocky2431/awesome-html-skill",
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/awesome-html-0.1.0-eaf44421363d.zip"
     }
   ]
 }

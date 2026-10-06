@@ -94,6 +94,18 @@
         "sha": "ec4a459b01b1700d023250ee8ef9d67e06bd9dfb",
         "path": "plugins/building-rules"
       }
+    },
+    {
+      "name": "awesome-html",
+      "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
+      "version": "0.1.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/awesome-html-skill.git",
+        "ref": "main",
+        "sha": "eaf44421363dbb583043ea60313afec366448f88",
+        "path": "plugins/awesome-html"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-这是一个供 Codex、Claude Code、zCode 和 Kimi Code 使用的插件市场，收录了六个插件。添加市场后，按需选择安装。
+这是一个供 Codex、Claude Code、zCode 和 Kimi Code 使用的插件市场，收录了七个插件。添加市场后，按需选择安装。
 
 每个插件保留自己的源码仓库、版本和发布节奏。本仓库记录选定的提交，提供各宿主能读取的市场目录，并根据这些提交生成 Kimi 安装包。
 
@@ -18,6 +18,7 @@
 | `agent-harness-design` | 设计和审查 Agent 的工具、权限、上下文恢复与验证机制。 | [Agent Harness Design](https://github.com/rocky2431/agent-harness-design-skill) |
 | `deep-thinking` | 澄清想法、研究证据、检验不同观点，形成有依据的结论。 | [Deep Thinking](https://github.com/rocky2431/deepthink-skill) |
 | `building-rules` | 指导功能开发、修复、重构和代码审查，控制调查与验证的必要投入。 | [Building Rules](https://github.com/rocky2431/building-rule-skill) |
+| `awesome-html` | 生成离线可打开的单文件 HTML 页面：解释页、进度看板、原型、幻灯片和图表。 | [Awesome HTML](https://github.com/rocky2431/awesome-html-skill) |
 
 这些插件可以自由组合。安装其中一个，不会连带安装其余插件。
 
@@ -69,7 +70,7 @@ https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/.zc
 
 ## 使用前需要知道
 
-UltraGoal、Task State 和 Building Rules 使用 Python 脚本，请让宿主能够执行 `python3`。支持的 Python 版本、目标设置和 Hook 行为见各自仓库的说明。
+UltraGoal、Task State、Building Rules 和 Awesome HTML 使用 Python 脚本，请让宿主能够执行 `python3`。支持的 Python 版本、目标设置和 Hook 行为见各自仓库的说明。Awesome HTML 的浏览器检查还需要 macOS 或 Linux 上的 Chrome、Chromium 或 Edge；没有时只做静态扫描。
 
 Agent Delegation 还需要 `agent-delegate` 命令、ACP 依赖，以及你打算调用的 Agent。安装市场插件只会加载 Skill，不会替你配置这些运行环境。请按[原仓库的运行环境安装说明](https://github.com/rocky2431/agent-delegate-skill#安装模型)完成配置。
 

@@ -125,7 +125,7 @@ class CatalogTests(unittest.TestCase):
                 {p["name"]: p.get("version") for p in entries},
                 host,
             )
-            for name in ("deep-thinking", "building-rules"):
+            for name in ("deep-thinking", "building-rules", "awesome-html"):
                 native = next(p for p in entries if p["name"] == name)
                 self.assertEqual("git-subdir", native["source"]["source"])
                 self.assertEqual(f"plugins/{name}", native["source"]["path"])
