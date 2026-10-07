@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
-      "version": "2.19.0",
+      "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
+      "version": "2.19.1",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "category": "Developer Tools"
     },
@@ -17,8 +17,8 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "fcb00dc30f520023a9d19d8b00bdb7c352914d89",
-      "version": "0.7.1",
+      "sha": "25fddca906715a9211efde2842b04f9bfebfdb87",
+      "version": "0.8.0",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "category": "Productivity"
     },
@@ -37,8 +37,8 @@
       "repository": "rocky2431/agent-harness-design-skill",
       "path": "plugins/agent-harness-design",
       "ref": "main",
-      "sha": "52a65adaed22311e757a6a4d69e38ee300c33e77",
-      "version": "0.5.1",
+      "sha": "3e6e24d75a39b0dc8cbf9d421276a3e5f3709908",
+      "version": "0.5.2",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "category": "Developer Tools"
     },
@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
-      "version": "0.3.0",
+      "sha": "a52095f68b5866f0382f1d36321453027a0d3748",
+      "version": "0.3.1",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     },

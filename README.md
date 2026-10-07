@@ -37,6 +37,8 @@ codex plugin add ultra-goal@excellent-skill-marketplace
 
 The same marketplace can be browsed through the Codex plugin interface once registered. Open a new task if the current task has not loaded the newly installed Skill or hooks.
 
+Codex runs a plugin's hooks only after you trust them, and trust is recorded per plugin and marketplace. After installing, reinstalling from a different marketplace, or updating a plugin whose hooks changed, review and trust its hooks in Codex; until then UltraGoal, Task State and Building Rules load their Skills but their hooks do not run.
+
 ### Claude Code
 
 Inside Claude Code:

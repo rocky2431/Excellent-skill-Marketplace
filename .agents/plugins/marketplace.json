@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
+        "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
         "path": "plugins/ultra-goal"
       },
       "policy": {
@@ -25,7 +25,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "fcb00dc30f520023a9d19d8b00bdb7c352914d89",
+        "sha": "25fddca906715a9211efde2842b04f9bfebfdb87",
         "path": "plugins/agent-delegation"
       },
       "policy": {
@@ -55,7 +55,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "52a65adaed22311e757a6a4d69e38ee300c33e77",
+        "sha": "3e6e24d75a39b0dc8cbf9d421276a3e5f3709908",
         "path": "plugins/agent-harness-design"
       },
       "policy": {
@@ -70,7 +70,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
+        "sha": "a52095f68b5866f0382f1d36321453027a0d3748",
         "path": "plugins/deep-thinking"
       },
       "policy": {

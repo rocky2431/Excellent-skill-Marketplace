@@ -5,20 +5,20 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.19.0",
+      "version": "2.19.1",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.19.0-5d860223b625.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.19.1-e3b9b6549d20.zip"
     },
     {
       "id": "agent-delegation",
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.7.1",
+      "version": "0.8.0",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.7.1-fcb00dc30f52.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.8.0-25fddca90671.zip"
     },
     {
       "id": "task-state-with-files",
@@ -35,20 +35,20 @@
       "displayName": "agent-harness-design",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "homepage": "https://github.com/rocky2431/agent-harness-design-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.1-52a65adaed22.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.2-3e6e24d75a39.zip"
     },
     {
       "id": "deep-thinking",
       "displayName": "deep-thinking",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "homepage": "https://github.com/rocky2431/deepthink-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.3.0-f60c6012312c.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.3.1-a52095f68b58.zip"
     },
     {
       "id": "building-rules",

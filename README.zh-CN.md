@@ -37,6 +37,8 @@ codex plugin add ultra-goal@excellent-skill-marketplace
 
 注册后，也可以在 Codex 的插件界面浏览这个市场。如果当前任务尚未加载新安装的 Skill 或 Hook，请开启一个新任务。
 
+Codex 只会运行已被信任的插件 Hook，而且信任是按“插件 + 市场”分别记录的。安装插件、从另一个市场重新安装，或更新了带 Hook 改动的插件后，都要在 Codex 里审核并信任它的 Hook；在此之前，UltraGoal、Task State 和 Building Rules 的 Skill 能加载，但 Hook 不会运行。
+
 ### Claude Code（CC）
 
 在 Claude Code 内输入：

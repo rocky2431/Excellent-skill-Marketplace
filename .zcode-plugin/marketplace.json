@@ -7,24 +7,24 @@
     {
       "name": "ultra-goal",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
-      "version": "2.19.0",
+      "version": "2.19.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "5d860223b625d1de94847f4e6e31b979ebfa0bfb",
+        "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
         "path": "plugins/ultra-goal"
       }
     },
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
-      "version": "0.7.1",
+      "version": "0.8.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "fcb00dc30f520023a9d19d8b00bdb7c352914d89"
+        "sha": "25fddca906715a9211efde2842b04f9bfebfdb87"
       },
       "strict": false,
       "skills": [
@@ -63,23 +63,23 @@
     {
       "name": "agent-harness-design",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.1-52a65adaed22.zip",
-        "sha256": "941b8f542664205e8c54ce3a03873f0c2f07806c9136ecaad772cd3f0eb759eb"
+        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.2-3e6e24d75a39.zip",
+        "sha256": "518f4f3fb04d4719e15005f562575ecd861edd40b0f5d0e6f482e79a27c55c61"
       }
     },
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "f60c6012312c40c04112ca0be5eaeb4a772ebb38",
+        "sha": "a52095f68b5866f0382f1d36321453027a0d3748",
         "path": "plugins/deep-thinking"
       }
     },
