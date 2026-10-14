@@ -28,9 +28,9 @@ jobs:
       - run: python -m unittest discover -s tests -v
       - name: Verify reproducible artifacts
         run: |
-          git add -- sources.json .agents .claude-plugin .zcode-plugin marketplaces packages
+          git add -- sources.json .agents .claude-plugin .grok-plugin .zcode-plugin marketplaces packages
           python scripts/catalog.py build
-          git diff --exit-code -- sources.json .agents .claude-plugin .zcode-plugin marketplaces packages
+          git diff --exit-code -- sources.json .agents .claude-plugin .grok-plugin .zcode-plugin marketplaces packages
       - name: Publish updated pins and packages
         run: |
           if git diff --cached --quiet; then

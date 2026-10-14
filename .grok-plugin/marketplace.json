@@ -1,0 +1,92 @@
+{
+  "name": "excellent-skill-marketplace",
+  "owner": {
+    "name": "rocky2431"
+  },
+  "plugins": [
+    {
+      "name": "ultra-goal",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
+      "version": "2.19.1",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/ultra-goal-skill.git",
+        "ref": "main",
+        "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
+        "path": "plugins/ultra-goal"
+      }
+    },
+    {
+      "name": "agent-delegation",
+      "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
+      "version": "0.9.1",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/agent-delegate-skill.git",
+        "ref": "main",
+        "sha": "9885c7d7331588ec3c1617d6b50df862665571ae",
+        "path": "plugins/agent-delegation"
+      }
+    },
+    {
+      "name": "task-state-with-files",
+      "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
+      "version": "0.5.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
+        "ref": "main",
+        "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f",
+        "path": "plugins/task-state-with-files"
+      }
+    },
+    {
+      "name": "agent-harness-design",
+      "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
+      "version": "0.5.2",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
+        "ref": "main",
+        "sha": "3e6e24d75a39b0dc8cbf9d421276a3e5f3709908",
+        "path": "plugins/agent-harness-design"
+      }
+    },
+    {
+      "name": "deep-thinking",
+      "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
+      "version": "0.3.1",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/deepthink-skill.git",
+        "ref": "main",
+        "sha": "a52095f68b5866f0382f1d36321453027a0d3748",
+        "path": "plugins/deep-thinking"
+      }
+    },
+    {
+      "name": "building-rules",
+      "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
+      "version": "0.1.2",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/building-rule-skill.git",
+        "ref": "main",
+        "sha": "ec4a459b01b1700d023250ee8ef9d67e06bd9dfb",
+        "path": "plugins/building-rules"
+      }
+    },
+    {
+      "name": "awesome-html",
+      "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
+      "version": "0.1.0",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/rocky2431/awesome-html-skill.git",
+        "ref": "main",
+        "sha": "eaf44421363dbb583043ea60313afec366448f88",
+        "path": "plugins/awesome-html"
+      }
+    }
+  ]
+}

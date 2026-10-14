@@ -15,6 +15,17 @@ import catalog
 
 
 class CatalogTests(unittest.TestCase):
+    def test_grok_catalog_installs_pinned_plugin_subdirectories(self):
+        source = catalog.load_sources()
+        entries = catalog.catalogs(source)[catalog.ROOT / ".grok-plugin/marketplace.json"]["plugins"]
+        self.assertEqual(len(source["plugins"]), len(entries))
+        for plugin, entry in zip(source["plugins"], entries):
+            self.assertEqual(plugin["name"], entry["name"])
+            self.assertEqual(plugin["version"], entry["version"])
+            self.assertEqual(catalog.git_source(plugin), entry["source"])
+            self.assertNotIn("skills", entry)
+            self.assertNotIn("hooks", entry)
+
     def test_build_metadata_versions(self):
         plugin = catalog.load_sources()["plugins"][0]
         for version in ("0.1.0+codex.20260906011727", "0.1.0-rc.1+build.2"):

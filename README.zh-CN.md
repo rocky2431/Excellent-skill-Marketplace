@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-这是一个供 Codex、Claude Code、zCode 和 Kimi Code 使用的插件市场，收录了七个插件。添加市场后，按需选择安装。
+这是一个供 Codex、Claude Code、zCode、Kimi Code 和 Grok Build 使用的插件市场，收录了七个插件。添加市场后，按需选择安装。
 
 每个插件保留自己的源码仓库、版本和发布节奏。本仓库记录选定的提交，提供各宿主能读取的市场目录，并根据这些提交生成 Kimi 安装包。
 
@@ -70,6 +70,18 @@ https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/.zc
 
 选择插件并安装。每个条目都指向一个 ZIP，包含插件文件和 Kimi 原生清单。也可以把条目中的 ZIP 地址传给 `/plugins install`。
 
+### Grok Build
+
+```sh
+grok plugin marketplace add rocky2431/Excellent-skill-Marketplace
+grok plugin marketplace update excellent-skill-marketplace
+grok plugin install agent-delegation --trust
+```
+
+对需要的插件 ID 分别运行安装命令。Grok 读取生成的 `.grok-plugin/marketplace.json`，直接安装锁定提交中的插件子目录；Claude 目录里的仓库根目录组件适配不能替代这一安装方式。开启新会话，用 `grok inspect` 核对实际加载的路径、Skill、Hook 和 MCP。
+
+Grok 的 Hook 事件和输入格式与 Claude 不同，装好 Skill 不代表所有宿主专用的恢复或自主续跑 Hook 都已适配。Hindsight 记忆另用官方 `hindsight-coding-agents install grok-build` 安装，不属于这七个插件。检查兼容模式继承的 Hook，避免原生 Hook 与其他宿主的会话处理脚本同时运行。
+
 ## 使用前需要知道
 
 UltraGoal、Task State、Building Rules 和 Awesome HTML 使用 Python 脚本，请让宿主能够执行 `python3`。支持的 Python 版本、目标设置和 Hook 行为见各自仓库的说明。Awesome HTML 的浏览器检查还需要 macOS 或 Linux 上的 Chrome、Chromium 或 Edge；没有时只做静态扫描。
@@ -84,7 +96,7 @@ Task State 在 Codex、CC 和 zCode 上包含 `SessionStart` 恢复 Hook。Kimi 
 
 ## 怎么更新
 
-刷新市场会获取目录，更新插件才会加载新安装包。这是两步操作，不能假定四个宿主都会在刷新市场时自动升级全部已安装插件。
+刷新市场会获取目录，更新插件才会加载新安装包。这是两步操作，不能假定所有宿主都会在刷新市场时自动升级全部已安装插件。
 
 | 宿主 | 刷新目录 | 更新已安装插件 |
 | --- | --- | --- |
@@ -92,6 +104,7 @@ Task State 在 Codex、CC 和 zCode 上包含 `SessionStart` 恢复 Hook。Kimi 
 | CC | `/plugin marketplace update excellent-skill-marketplace` | `/plugin update 插件ID@excellent-skill-marketplace`，或开启该市场的自动更新。 |
 | zCode | 在插件页刷新市场。 | 在同一页面更新选定插件。 |
 | Kimi Code | 重新打开上面的 `/plugins marketplace` 地址。 | 从当前目录选择新安装包。保存的旧 ZIP 地址仍然指向旧包。 |
+| Grok Build | `grok plugin marketplace update excellent-skill-marketplace` | `grok plugin update PLUGIN` |
 
 CC 的第三方市场默认不开启自动更新，具体设置见[官方说明](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates)。
 
@@ -122,6 +135,7 @@ python3 -m unittest discover -s tests -v
 | `sources.json` | 原仓库、插件路径、版本和固定提交。 |
 | `.agents/plugins/marketplace.json` | Codex 目录。 |
 | `.claude-plugin/marketplace.json` | CC 目录及组件适配。 |
+| `.grok-plugin/marketplace.json` | Grok 目录，直接指向锁定提交的插件子目录。 |
 | `.zcode-plugin/marketplace.json` | zCode 目录及组件适配。 |
 | `marketplaces/kimi.json` | Kimi 目录及安装包地址。 |
 | `packages/kimi/` | 自动生成的 ZIP，每个包内都有 `marketplace-origin.json`。 |

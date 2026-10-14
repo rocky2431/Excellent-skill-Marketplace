@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-A shared catalog of seven plugins for Codex, Claude Code, zCode, and Kimi Code. Add the marketplace in your agent, then install the plugins you want.
+A shared catalog of seven plugins for Codex, Claude Code, zCode, Kimi Code, and Grok Build. Add the marketplace in your agent, then install the plugins you want.
 
 Each plugin keeps its own source repository, version, and release schedule. This repository records the selected commits and provides the catalog format each host reads. Kimi packages are generated from those commits.
 
@@ -70,6 +70,26 @@ Inside Kimi Code, open the catalog:
 
 Choose a plugin and install it. Each entry points to a ZIP containing the plugin and a native Kimi manifest. You can also pass an entry's ZIP URL to `/plugins install`.
 
+### Grok Build
+
+```sh
+grok plugin marketplace add rocky2431/Excellent-skill-Marketplace
+grok plugin marketplace update excellent-skill-marketplace
+grok plugin install agent-delegation --trust
+```
+
+Repeat the install command for each desired plugin ID. Grok reads the generated
+`.grok-plugin/marketplace.json`, which points directly at each pinned plugin
+subdirectory. The Claude catalog's root-level component overrides do not provide
+the same installation behavior in Grok. Start a new session and use `grok inspect`
+to verify the loaded package paths, skills, hooks and MCP servers.
+
+Grok hook events and payloads differ from Claude's. Installing the Skills does not
+establish support for every host-specific recovery or autonomous-continuation hook.
+For Hindsight memory, use its official `hindsight-coding-agents install grok-build`
+integration; it is separate from these seven plugins. Inspect inherited compatibility
+hooks to avoid running another host's transcript handlers alongside native ones.
+
 ## Before using the plugins
 
 UltraGoal, Task State, Building Rules, and Awesome HTML use Python scripts. Make `python3` available to the host. Read the upstream instructions for supported Python versions, goal setup, and hook behavior. Awesome HTML's browser check also needs Chrome, Chromium, or Edge on macOS or Linux; without one it runs only the static scan.
@@ -98,6 +118,7 @@ Refreshing a marketplace fetches its catalog. Updating an installed plugin loads
 | Claude Code | `/plugin marketplace update excellent-skill-marketplace` | `/plugin update PLUGIN@excellent-skill-marketplace`, or enable this marketplace's auto-update setting. |
 | zCode | Refresh the marketplace in the plugin page. | Update the selected plugins in the same page. |
 | Kimi Code | Reopen the `/plugins marketplace` URL above. | Select the current package from that catalog. A saved older ZIP URL continues to identify the older package. |
+| Grok Build | `grok plugin marketplace update excellent-skill-marketplace` | `grok plugin update PLUGIN` |
 
 Claude Code's third-party marketplaces have auto-update disabled by default. See its [marketplace documentation](https://code.claude.com/docs/en/discover-plugins#configure-auto-updates).
 
@@ -128,6 +149,7 @@ For a local manual refresh, review the diff, commit it, and push this repository
 | `sources.json` | Upstream repositories, plugin paths, versions, and commit pins. |
 | `.agents/plugins/marketplace.json` | Codex catalog. |
 | `.claude-plugin/marketplace.json` | Claude Code catalog and component adapters. |
+| `.grok-plugin/marketplace.json` | Grok catalog with pinned plugin subdirectories. |
 | `.zcode-plugin/marketplace.json` | zCode catalog and component adapters. |
 | `marketplaces/kimi.json` | Kimi catalog with package URLs. |
 | `packages/kimi/` | Generated ZIPs. Each includes `marketplace-origin.json`. |

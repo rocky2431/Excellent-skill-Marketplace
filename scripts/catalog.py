@@ -161,6 +161,11 @@ def catalogs(source: dict) -> dict[Path, dict]:
         ROOT / ".claude-plugin/marketplace.json": {
             **common, "plugins": [claude_entry(p, "claude") for p in source["plugins"]],
         },
+        ROOT / ".grok-plugin/marketplace.json": {
+            **common, "plugins": [{"name": p["name"], "description": p["description"],
+                                    "version": p["version"], "source": git_source(p)}
+                                   for p in source["plugins"]],
+        },
         ROOT / ".zcode-plugin/marketplace.json": {
             **common, "plugins": zcode,
         },
@@ -195,7 +200,7 @@ def check(source: dict) -> None:
                 prefix = skill_root.removeprefix("./").rstrip("/") + "/"
                 if not any(n.startswith(prefix) and n.endswith("/SKILL.md") for n in archive.namelist()):
                     raise ValueError(f"Missing packaged skills: {plugin['name']}")
-    print(f"OK: four host catalogs and {len(source['plugins'])} pinned Kimi packages")
+    print(f"OK: five host catalogs and {len(source['plugins'])} pinned Kimi packages")
 
 
 def main() -> None:
