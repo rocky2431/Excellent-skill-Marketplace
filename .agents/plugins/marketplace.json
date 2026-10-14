@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
+        "sha": "62f75e07dd9a9cb74ed40adade462934fc72baf4",
         "path": "plugins/ultra-goal"
       },
       "policy": {
@@ -25,7 +25,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "9885c7d7331588ec3c1617d6b50df862665571ae",
+        "sha": "36bbc23ac090f35464dada4fe536c2506eb2264a",
         "path": "plugins/agent-delegation"
       },
       "policy": {
@@ -40,7 +40,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f",
+        "sha": "be03cf4cd5a88802241da723dbfa42f660d8d9af",
         "path": "plugins/task-state-with-files"
       },
       "policy": {
@@ -85,7 +85,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/building-rule-skill.git",
         "ref": "main",
-        "sha": "ec4a459b01b1700d023250ee8ef9d67e06bd9dfb",
+        "sha": "642ab25d1149307e1dc70a91165d4cd21126aac1",
         "path": "plugins/building-rules"
       },
       "policy": {

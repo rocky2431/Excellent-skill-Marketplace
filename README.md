@@ -84,8 +84,13 @@ subdirectory. The Claude catalog's root-level component overrides do not provide
 the same installation behavior in Grok. Start a new session and use `grok inspect`
 to verify the loaded package paths, skills, hooks and MCP servers.
 
-Grok hook events and payloads differ from Claude's. Installing the Skills does not
-establish support for every host-specific recovery or autonomous-continuation hook.
+Grok has dedicated native hooks for UltraGoal, Task State and Building Rules.
+UltraGoal supports ordinary continuation, event-driven turn handoff, background
+wait/wakeup and cancellation. Recovery context arrives with the first tool result
+after startup, resume or compaction because Grok discards SessionStart output.
+Agent Delegation uses Grok's native background completion for idle delivery.
+These paths were exercised in real Grok 1.0.52 sessions; see each upstream
+reference for the commands, ownership rules and evidence limits.
 For Hindsight memory, use its official `hindsight-coding-agents install grok-build`
 integration; it is separate from these seven plugins. Inspect inherited compatibility
 hooks to avoid running another host's transcript handlers alongside native ones.

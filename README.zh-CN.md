@@ -80,7 +80,9 @@ grok plugin install agent-delegation --trust
 
 对需要的插件 ID 分别运行安装命令。Grok 读取生成的 `.grok-plugin/marketplace.json`，直接安装锁定提交中的插件子目录；Claude 目录里的仓库根目录组件适配不能替代这一安装方式。开启新会话，用 `grok inspect` 核对实际加载的路径、Skill、Hook 和 MCP。
 
-Grok 的 Hook 事件和输入格式与 Claude 不同，装好 Skill 不代表所有宿主专用的恢复或自主续跑 Hook 都已适配。Hindsight 记忆另用官方 `hindsight-coding-agents install grok-build` 安装，不属于这七个插件。检查兼容模式继承的 Hook，避免原生 Hook 与其他宿主的会话处理脚本同时运行。
+UltraGoal、Task State 和 Building Rules 已提供 Grok 专属原生 Hook。UltraGoal 支持普通续跑、事件驱动的跨轮接力、后台等待与唤醒，以及取消；恢复上下文在启动、重载或压缩后的第一次工具结果中注入，因为 Grok 不采用 SessionStart 的输出。Agent Delegation 使用原生后台完成事件唤醒闲置会话。这些路径已在真实 Grok 1.0.52 会话中验证，具体命令、归属规则和证据边界见各源码仓库。
+
+Hindsight 记忆另用官方 `hindsight-coding-agents install grok-build` 安装，不属于这七个插件。检查兼容模式继承的 Hook，避免原生 Hook 与其他宿主的会话处理脚本同时运行。
 
 ## 使用前需要知道
 

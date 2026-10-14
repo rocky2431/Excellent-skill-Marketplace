@@ -5,30 +5,30 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.19.1",
-      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
+      "version": "2.20.0",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex, Claude Code and Grok Build.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.19.1-e3b9b6549d20.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.20.0-62f75e07dd9a.zip"
     },
     {
       "id": "agent-delegation",
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.9.1",
+      "version": "0.9.2",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.9.1-9885c7d73315.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.9.2-36bbc23ac090.zip"
     },
     {
       "id": "task-state-with-files",
       "displayName": "task-state-with-files",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
       "homepage": "https://github.com/rocky2431/plan-with-flie-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.5.0-5bfe9129faac.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/task-state-with-files-0.6.0-be03cf4cd5a8.zip"
     },
     {
       "id": "agent-harness-design",
@@ -55,10 +55,10 @@
       "displayName": "building-rules",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
       "homepage": "https://github.com/rocky2431/building-rule-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.1.2-ec4a459b01b1.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.2.0-642ab25d1149.zip"
     },
     {
       "id": "awesome-html",

@@ -6,25 +6,25 @@
   "plugins": [
     {
       "name": "ultra-goal",
-      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex and Claude Code.",
-      "version": "2.19.1",
+      "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex, Claude Code and Grok Build.",
+      "version": "2.20.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "e3b9b6549d205c03fd6829005f20accb32c75e93",
+        "sha": "62f75e07dd9a9cb74ed40adade462934fc72baf4",
         "path": "plugins/ultra-goal"
       }
     },
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
-      "version": "0.9.1",
+      "version": "0.9.2",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "9885c7d7331588ec3c1617d6b50df862665571ae"
+        "sha": "36bbc23ac090f35464dada4fe536c2506eb2264a"
       },
       "strict": false,
       "skills": [
@@ -34,12 +34,12 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "5bfe9129faac20bbe42a90ddf9c0954e84561a9f"
+        "sha": "be03cf4cd5a88802241da723dbfa42f660d8d9af"
       },
       "strict": false,
       "skills": [
@@ -86,12 +86,12 @@
     {
       "name": "building-rules",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/building-rule-skill.git",
         "ref": "main",
-        "sha": "ec4a459b01b1700d023250ee8ef9d67e06bd9dfb",
+        "sha": "642ab25d1149307e1dc70a91165d4cd21126aac1",
         "path": "plugins/building-rules"
       }
     },
