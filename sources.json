@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "a52095f68b5866f0382f1d36321453027a0d3748",
-      "version": "0.3.1",
+      "sha": "18304a3ed4e604dc7c752e48c579fc5f5fb19659",
+      "version": "0.4.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     },
@@ -57,8 +57,8 @@
       "repository": "rocky2431/building-rule-skill",
       "path": "plugins/building-rules",
       "ref": "main",
-      "sha": "642ab25d1149307e1dc70a91165d4cd21126aac1",
-      "version": "0.2.0",
+      "sha": "01d3e7b5613b4fd0ab05e6e96470c4af8c0b7beb",
+      "version": "0.3.0",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
       "category": "Developer Tools"
     },
