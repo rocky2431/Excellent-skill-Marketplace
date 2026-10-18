@@ -55,7 +55,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "3e6e24d75a39b0dc8cbf9d421276a3e5f3709908",
+        "sha": "b0934db1eca89e486564a11079f777b6c49aa114",
         "path": "plugins/agent-harness-design"
       },
       "policy": {

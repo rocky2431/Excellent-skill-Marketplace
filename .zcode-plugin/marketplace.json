@@ -63,12 +63,12 @@
     {
       "name": "agent-harness-design",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
-      "version": "0.5.2",
+      "version": "0.6.0",
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.2-3e6e24d75a39.zip",
-        "sha256": "518f4f3fb04d4719e15005f562575ecd861edd40b0f5d0e6f482e79a27c55c61"
+        "url": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.6.0-b0934db1eca8.zip",
+        "sha256": "d9601a629fd77de812e2b2208999ea7efb78e467093d7a6c8432f7fed0eef44d"
       }
     },
     {

@@ -37,8 +37,8 @@
       "repository": "rocky2431/agent-harness-design-skill",
       "path": "plugins/agent-harness-design",
       "ref": "main",
-      "sha": "3e6e24d75a39b0dc8cbf9d421276a3e5f3709908",
-      "version": "0.5.2",
+      "sha": "b0934db1eca89e486564a11079f777b6c49aa114",
+      "version": "0.6.0",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "category": "Developer Tools"
     },

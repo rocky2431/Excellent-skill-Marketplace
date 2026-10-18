@@ -35,10 +35,10 @@
       "displayName": "agent-harness-design",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.5.2",
+      "version": "0.6.0",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
       "homepage": "https://github.com/rocky2431/agent-harness-design-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.5.2-3e6e24d75a39.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-harness-design-0.6.0-b0934db1eca8.zip"
     },
     {
       "id": "deep-thinking",
