@@ -5,10 +5,10 @@
       "displayName": "ultra-goal",
       "type": "plugin",
       "tier": "curated",
-      "version": "2.20.0",
+      "version": "2.21.0",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex, Claude Code and Grok Build.",
       "homepage": "https://github.com/rocky2431/ultra-goal-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.20.0-62f75e07dd9a.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/ultra-goal-2.21.0-d3f5e016be48.zip"
     },
     {
       "id": "agent-delegation",

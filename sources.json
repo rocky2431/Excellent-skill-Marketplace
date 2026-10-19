@@ -7,8 +7,8 @@
       "repository": "rocky2431/ultra-goal-skill",
       "path": "plugins/ultra-goal",
       "ref": "main",
-      "sha": "62f75e07dd9a9cb74ed40adade462934fc72baf4",
-      "version": "2.20.0",
+      "sha": "d3f5e016be485cf6816095a28aedb7efd12ac6bb",
+      "version": "2.21.0",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex, Claude Code and Grok Build.",
       "category": "Developer Tools"
     },
