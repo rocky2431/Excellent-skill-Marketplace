@@ -10,7 +10,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "d3f5e016be485cf6816095a28aedb7efd12ac6bb",
+        "sha": "61e6b145a46716a3d62b3b96c6035e85302506f3",
         "path": "plugins/ultra-goal"
       },
       "policy": {
