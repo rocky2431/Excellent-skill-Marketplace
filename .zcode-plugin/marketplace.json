@@ -7,12 +7,12 @@
     {
       "name": "ultra-goal",
       "description": "Define executable goals and acceptance evidence, with autonomous continuation and event-driven waiting on Codex, Claude Code and Grok Build.",
-      "version": "2.22.0",
+      "version": "2.22.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/ultra-goal-skill.git",
         "ref": "main",
-        "sha": "61e6b145a46716a3d62b3b96c6035e85302506f3",
+        "sha": "1cf4dc977ee28f796612de5bc7772e927ad83232",
         "path": "plugins/ultra-goal"
       }
     },
