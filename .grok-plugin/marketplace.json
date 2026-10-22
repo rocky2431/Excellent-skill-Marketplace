@@ -55,12 +55,12 @@
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "18304a3ed4e604dc7c752e48c579fc5f5fb19659",
+        "sha": "238ce1fe5df4eecd4d870fac042b3c20d38cb698",
         "path": "plugins/deep-thinking"
       }
     },
