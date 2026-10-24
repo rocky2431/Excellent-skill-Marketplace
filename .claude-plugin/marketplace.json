@@ -19,12 +19,12 @@
     {
       "name": "agent-delegation",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
-      "version": "0.9.2",
+      "version": "0.10.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "36bbc23ac090f35464dada4fe536c2506eb2264a"
+        "sha": "f1f1b5dc158219165c4c6d0cf756bb38eb22872e"
       },
       "strict": false,
       "skills": [
@@ -78,12 +78,12 @@
     {
       "name": "deep-thinking",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "238ce1fe5df4eecd4d870fac042b3c20d38cb698",
+        "sha": "df10855ad4eedd2eb9a1d3ce729de012b655db70",
         "path": "plugins/deep-thinking"
       }
     },
@@ -102,12 +102,12 @@
     {
       "name": "awesome-html",
       "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/awesome-html-skill.git",
         "ref": "main",
-        "sha": "eaf44421363dbb583043ea60313afec366448f88",
+        "sha": "78b8d2e4df4945d09678d67dc09582c61c6c74a8",
         "path": "plugins/awesome-html"
       }
     }

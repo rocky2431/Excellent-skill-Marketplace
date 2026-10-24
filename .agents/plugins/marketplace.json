@@ -25,7 +25,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/agent-delegate-skill.git",
         "ref": "main",
-        "sha": "36bbc23ac090f35464dada4fe536c2506eb2264a",
+        "sha": "f1f1b5dc158219165c4c6d0cf756bb38eb22872e",
         "path": "plugins/agent-delegation"
       },
       "policy": {
@@ -70,7 +70,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/deepthink-skill.git",
         "ref": "main",
-        "sha": "238ce1fe5df4eecd4d870fac042b3c20d38cb698",
+        "sha": "df10855ad4eedd2eb9a1d3ce729de012b655db70",
         "path": "plugins/deep-thinking"
       },
       "policy": {
@@ -100,7 +100,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/awesome-html-skill.git",
         "ref": "main",
-        "sha": "eaf44421363dbb583043ea60313afec366448f88",
+        "sha": "78b8d2e4df4945d09678d67dc09582c61c6c74a8",
         "path": "plugins/awesome-html"
       },
       "policy": {

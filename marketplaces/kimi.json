@@ -15,10 +15,10 @@
       "displayName": "agent-delegation",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.9.2",
+      "version": "0.10.0",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "homepage": "https://github.com/rocky2431/agent-delegate-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.9.2-36bbc23ac090.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/agent-delegation-0.10.0-f1f1b5dc1582.zip"
     },
     {
       "id": "task-state-with-files",
@@ -45,10 +45,10 @@
       "displayName": "deep-thinking",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "homepage": "https://github.com/rocky2431/deepthink-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.4.1-238ce1fe5df4.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/deep-thinking-0.5.0-df10855ad4ee.zip"
     },
     {
       "id": "building-rules",
@@ -65,10 +65,10 @@
       "displayName": "awesome-html",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
       "homepage": "https://github.com/rocky2431/awesome-html-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/awesome-html-0.1.0-eaf44421363d.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/awesome-html-0.2.0-78b8d2e4df49.zip"
     }
   ]
 }

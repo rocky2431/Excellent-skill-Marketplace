@@ -69,9 +69,9 @@ understanding and next action. If a Task note owns it, UltraGoal Carry-over keep
 locator and essential run facts and directs recovery to read the note. If Carry-over
 owns it, do not create a parallel Task ledger. Workers return evidence to that writer.
 
-Use an explicitly requested path, then existing task documents, then the repository's
-business-document convention (`docs/` or `documents/`). New projects without one may
-use `documents/<work-id>/`. Existing `thinking/` inquiries, `.tasks/`, `.goals/` and
+Use an explicitly requested path, then existing task documents, then the project's
+documented convention, then the invoked Skill's own folder (see the next section).
+Existing `docs/`, `documents/`, `thinking/`, `.tasks/` and `.goals/` content and
 private runtime receipts stay at their valid paths. Only create files that this task
 needs; links and IDs cannot transfer uncommitted files to another workspace.
 
@@ -82,12 +82,12 @@ Deep Thinking preserves working reasoning and an independently understandable
 result; its standalone defaults remain `THOUGHTS.md` and `RESULT.md`, while bounded
 embedded inquiries can reuse existing sections. Task State preserves borrowed headings,
 edits only mutable state and follows that document's lifecycle, without moving a goal
-into `.tasks/archive/`. Goals retain their paired decisions and frozen clauses.
+into `tasks/archive/`. Goals retain their paired decisions and frozen clauses.
 
 | Selected capabilities | Current content and necessary artifacts |
 |---|---|
 | Deep Thinking | Inquiry state and reasoning; an independently understandable result |
-| Task State | One existing record or the standalone `.tasks/<id>.md` |
+| Task State | One existing record or the standalone `tasks/<id>.md` |
 | UltraGoal | Confirmed goal, paired decisions, Carry-over and actual acceptance evidence |
 | Deep Thinking + Task State | Maintain the inquiry record in place; retain the needed result |
 | Deep Thinking + UltraGoal | Research informs terms; selected record or Carry-over owns main task state |
@@ -99,6 +99,33 @@ its own question and evidence; the main record retains its relevance, handoff an
 integrated result without copying its entire ledger. An independently delivered or
 versioned report remains separately readable. Each installed package carries its own
 minimum reuse rules; this Marketplace document is not a runtime dependency.
+
+## Store and recover persistent documents
+
+Owner decision, 2026-10-23. Each Skill states these rules in its own package; this
+section keeps them consistent.
+
+1. **One folder per Skill at the project root**, beside `docs/`, created on first use:
+   `research/` (Deep Thinking), `tasks/` (Task State), `html/` (Awesome HTML),
+   `delegations/` (Agent Delegation); UltraGoal keeps `.goals/` until it migrates to
+   `goals/`. There is no shared parent folder. The creating Skill writes a `README.md`
+   whose first line is `<!-- managed-by: <skill> -->`; a same-named folder without that
+   line belongs to the project and is never written into. One folder belongs to one
+   Skill; another Skill edits a file there only when the owner selects it explicitly.
+2. **Persistent documents have two parts:** a short block between
+   `<!-- current-state -->` and `<!-- /current-state -->` holding only what is true now,
+   and append-only history describing what happened then. Standing rules live in the
+   block, never only in history.
+3. **The model writes with its normal editing tools.** Scripts locate, check and
+   deliver; they are never the only write path, so a broken script cannot stop work.
+4. **Recovery delivers the block and the record path**, below the tightest host hook
+   cap (Claude Code and Grok: 10,000 characters). It is facts and navigation, not
+   instructions; the latest user request wins.
+5. **Machines report facts and keep recoverable copies; they do not block** except for
+   irreversible effects. Whether a statement is stale stays a model judgment.
+
+Runtime state (session selections, last-good copies, drivers, receipts) stays in
+hidden, ignored directories such as `.task-state/`.
 
 ## Connect direction, milestones and current work
 

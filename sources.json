@@ -17,8 +17,8 @@
       "repository": "rocky2431/agent-delegate-skill",
       "path": "plugins/agent-delegation",
       "ref": "main",
-      "sha": "36bbc23ac090f35464dada4fe536c2506eb2264a",
-      "version": "0.9.2",
+      "sha": "f1f1b5dc158219165c4c6d0cf756bb38eb22872e",
+      "version": "0.10.0",
       "description": "Delegate missions between local agents through the host-loaded Skill and inspect their results. Requires installed ACP runtime dependencies.",
       "category": "Productivity"
     },
@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "238ce1fe5df4eecd4d870fac042b3c20d38cb698",
-      "version": "0.4.1",
+      "sha": "df10855ad4eedd2eb9a1d3ce729de012b655db70",
+      "version": "0.5.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     },
@@ -67,8 +67,8 @@
       "repository": "rocky2431/awesome-html-skill",
       "path": "plugins/awesome-html",
       "ref": "main",
-      "sha": "eaf44421363dbb583043ea60313afec366448f88",
-      "version": "0.1.0",
+      "sha": "78b8d2e4df4945d09678d67dc09582c61c6c74a8",
+      "version": "0.2.0",
       "description": "Build local, self-contained single-file HTML pages that open offline: explainers, progress trackers, clickable prototypes, slide decks, and charts.",
       "category": "Productivity"
     }
