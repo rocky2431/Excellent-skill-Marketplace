@@ -63,12 +63,12 @@
     {
       "name": "agent-harness-design",
       "description": "Design agent loops and components, with dated model/API adaptation and evidence-based verification.",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/agent-harness-design-skill.git",
         "ref": "main",
-        "sha": "b0934db1eca89e486564a11079f777b6c49aa114"
+        "sha": "4e744e9be7b4621b8952dc972552d6dc5ecf3602"
       },
       "strict": false,
       "skills": [
