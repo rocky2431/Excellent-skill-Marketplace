@@ -117,11 +117,25 @@ class CatalogTests(unittest.TestCase):
                                        "activate", "--task", "selected", "--session", "owner",
                                        "--root", str(workspace)], env=env, text=True, capture_output=True)
             self.assertEqual(0, selected.returncode, selected.stderr)
-            before = {str(p): p.read_bytes() for p in workspace.rglob("*") if p.is_file()}
+
+            def files(include_runtime=True):
+                return {str(p): p.read_bytes() for p in workspace.rglob("*") if p.is_file()
+                        and (include_runtime or ".task-state" not in p.relative_to(workspace).parts)}
+
+            before = files(include_runtime=False)
             for host in ("codex", "claude", "zcode", "kimi"):
                 self.assertIn("Keep refund signs", hook(host, "owner"), host)
                 self.assertEqual("", hook(host, "unrelated"), host)
-            self.assertEqual(before, {str(p): p.read_bytes() for p in workspace.rglob("*") if p.is_file()})
+            # Since 0.7.0 a selected session keeps last-good copies under the
+            # ignored .task-state/ runtime directory; hooks still never change
+            # task records or any other project file.
+            self.assertEqual(before, files(include_runtime=False))
+            self.assertEqual(b"*\n", (workspace / ".task-state/.gitignore").read_bytes())
+            # Unrelated sessions write nothing at all.
+            settled = files()
+            for host in ("codex", "claude", "zcode", "kimi"):
+                self.assertEqual("", hook(host, "unrelated"), host)
+            self.assertEqual(settled, files())
 
     def test_native_catalog_and_package_contracts(self):
         source = catalog.load_sources()
