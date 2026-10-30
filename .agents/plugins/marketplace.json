@@ -40,7 +40,7 @@
         "source": "git-subdir",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "02709638b0f3144876adb4dac3a5730b522fe1c5",
+        "sha": "fd2f4be8dc1d037e1d91a643db201404e1f2ced7",
         "path": "plugins/task-state-with-files"
       },
       "policy": {

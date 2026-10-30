@@ -34,12 +34,12 @@
     {
       "name": "task-state-with-files",
       "description": "Keep task progress in local files for recovery across sessions and compaction. Hook support depends on the host.",
-      "version": "0.8.0",
+      "version": "0.9.0",
       "source": {
         "source": "url",
         "url": "https://github.com/rocky2431/plan-with-flie-skill.git",
         "ref": "main",
-        "sha": "02709638b0f3144876adb4dac3a5730b522fe1c5"
+        "sha": "fd2f4be8dc1d037e1d91a643db201404e1f2ced7"
       },
       "strict": false,
       "skills": [
