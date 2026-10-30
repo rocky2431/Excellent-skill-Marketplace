@@ -55,10 +55,10 @@
       "displayName": "building-rules",
       "type": "plugin",
       "tier": "curated",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "description": "Deliver complete engineering outcomes with proportionate investigation, implementation, verification and records.",
       "homepage": "https://github.com/rocky2431/building-rule-skill",
-      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.3.0-01d3e7b5613b.zip"
+      "source": "https://raw.githubusercontent.com/rocky2431/Excellent-skill-Marketplace/main/packages/kimi/building-rules-0.3.1-4457c37d1d54.zip"
     },
     {
       "id": "awesome-html",
