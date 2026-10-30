@@ -130,10 +130,12 @@ def claude_entry(plugin: dict, host: str) -> dict:
         variable = "CLAUDE_PLUGIN_ROOT" if host == "claude" else "ZCODE_PLUGIN_ROOT"
         script = f"${{{variable}}}/{plugin['path']}/skills/task-state-with-files/scripts/lifecycle_hook.py"
         hook = {"type": "command", "command": f'python3 "{script}" --host {host}', "timeout": 10}
-        # This entry replaces the package's hooks/hooks.json, so mirror all of its events.
+        # This entry replaces the package's hooks/hooks.json, so mirror every event the host
+        # uses there: Claude Code's page backstop runs at Stop; zCode keeps its post-edit check.
+        other = "Stop" if host == "claude" else "PostToolUse"
         entry["hooks"] = {
             "SessionStart": [{"matcher": "^(startup|resume|clear|compact)$", "hooks": [hook]}],
-            "PostToolUse": [{"hooks": [dict(hook)]}],
+            other: [{"hooks": [dict(hook)]}],
         }
     return entry
 

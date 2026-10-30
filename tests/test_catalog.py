@@ -161,11 +161,13 @@ class CatalogTests(unittest.TestCase):
             command = task["hooks"]["SessionStart"][0]["hooks"][0]["command"]
             self.assertIn(variable, command)
             self.assertIn(f"--host {host}", command)
-            # The entry replaces the package's hooks/hooks.json, so it must carry every event.
-            self.assertEqual({"SessionStart", "PostToolUse"}, set(task["hooks"]))
-            sensor = task["hooks"]["PostToolUse"][0]
-            self.assertNotIn("matcher", sensor)
-            self.assertEqual(command, sensor["hooks"][0]["command"])
+            # The entry replaces the package's hooks/hooks.json, so it must carry every event the
+            # host uses: Claude Code's page backstop runs at Stop; zCode keeps its post-edit check.
+            other = {"claude": "Stop", "zcode": "PostToolUse"}[host]
+            self.assertEqual({"SessionStart", other}, set(task["hooks"]))
+            group = task["hooks"][other][0]
+            self.assertNotIn("matcher", group)
+            self.assertEqual(command, group["hooks"][0]["command"])
         harness = next(p for p in rendered[catalog.ROOT / ".zcode-plugin/marketplace.json"]["plugins"]
                        if p["name"] == "agent-harness-design")
         self.assertEqual(harness["source"]["type"], "zip")
