@@ -129,10 +129,12 @@ def claude_entry(plugin: dict, host: str) -> dict:
     if plugin["name"] == "task-state-with-files":
         variable = "CLAUDE_PLUGIN_ROOT" if host == "claude" else "ZCODE_PLUGIN_ROOT"
         script = f"${{{variable}}}/{plugin['path']}/skills/task-state-with-files/scripts/lifecycle_hook.py"
-        entry["hooks"] = {"SessionStart": [{
-            "matcher": "^(startup|resume|clear|compact)$",
-            "hooks": [{"type": "command", "command": f'python3 "{script}" --host {host}', "timeout": 10}],
-        }]}
+        hook = {"type": "command", "command": f'python3 "{script}" --host {host}', "timeout": 10}
+        # This entry replaces the package's hooks/hooks.json, so mirror all of its events.
+        entry["hooks"] = {
+            "SessionStart": [{"matcher": "^(startup|resume|clear|compact)$", "hooks": [hook]}],
+            "PostToolUse": [{"hooks": [dict(hook)]}],
+        }
     return entry
 
 

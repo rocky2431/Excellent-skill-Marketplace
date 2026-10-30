@@ -57,6 +57,17 @@
               }
             ]
           }
+        ],
+        "PostToolUse": [
+          {
+            "hooks": [
+              {
+                "type": "command",
+                "command": "python3 \"${ZCODE_PLUGIN_ROOT}/plugins/task-state-with-files/skills/task-state-with-files/scripts/lifecycle_hook.py\" --host zcode",
+                "timeout": 10
+              }
+            ]
+          }
         ]
       }
     },
