@@ -47,8 +47,8 @@
       "repository": "rocky2431/deepthink-skill",
       "path": "plugins/deep-thinking",
       "ref": "main",
-      "sha": "df10855ad4eedd2eb9a1d3ce729de012b655db70",
-      "version": "0.5.0",
+      "sha": "65d114dbc2c527abe73c5b79537143129abef134",
+      "version": "0.6.0",
       "description": "Clarify ideas, research evidence, examine competing views, and deliver a defensible outcome through human-led inquiry.",
       "category": "Productivity"
     },
